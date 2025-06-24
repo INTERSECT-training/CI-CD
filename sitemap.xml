@@ -13,6 +13,9 @@
     <loc>https://INTERSECT-training.github.io/CI-CD/add-badges.html</loc>
   </url>
   <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/aio.html</loc>
+  </url>
+  <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/cd-for-python-package.html</loc>
   </url>
   <url>
@@ -34,6 +37,9 @@
     <loc>https://INTERSECT-training.github.io/CI-CD/hello-ci-world.html</loc>
   </url>
   <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/images.html</loc>
+  </url>
+  <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/index.html</loc>
   </url>
   <url>
@@ -47,6 +53,9 @@
   </url>
   <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/add-badges.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/instructor/aio.html</loc>
   </url>
   <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/cd-for-python-package.html</loc>
@@ -70,10 +79,19 @@
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/hello-ci-world.html</loc>
   </url>
   <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/profiles.html</loc>
@@ -91,7 +109,13 @@
     <loc>https://INTERSECT-training.github.io/CI-CD/instructor/yaml-and-github-actions.html</loc>
   </url>
   <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/CI-CD/key-points.html</loc>
   </url>
   <url>
     <loc>https://INTERSECT-training.github.io/CI-CD/profiles.html</loc>
