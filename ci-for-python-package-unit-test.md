@@ -45,6 +45,7 @@ What tools accomplish these checks?
 
 ## Solution
 Just some suggestions (not comprehensive):
+
 * Testing passes ([pytest][pytest] for unit testing or [nox][nox] for parallel Python environment testing)
 * Code is of quality (i.e. [ruff][ruff] or [flake8][flake8] for [linting][lint] or [mccabe][mccabe] for reducing [cyclomatic complexity][cc])
 * Code conforms to project formatting guide (i.e. [black][black] for formatting)
