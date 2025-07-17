@@ -69,6 +69,7 @@ First, remove the `greeting` job.
 Then, add a new job called `test-python-3-11`.
 
 Have this new job:
+
 - Checkout the code
 - Setup a Python 3.11 environment
 - Install the package with our test dependencies
