@@ -169,6 +169,7 @@ The `<<` allows you to merge the items in a dereferenced anchor. Both `bar` and 
 # What CI/CD tools use YAML
 
 The following are just some of the CI/CD tools that use YAML:
+
 - [Native GitHub Actions YAML Docs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 - [Native GitLab CI/CD YAML Docs](https://docs.gitlab.com/ee/ci/yaml/)
 - [Circle CI YAML Docs](https://circleci.com/docs/introduction-to-yaml-configurations/)
