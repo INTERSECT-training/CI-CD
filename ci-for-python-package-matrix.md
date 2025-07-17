@@ -288,39 +288,39 @@ Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but all
 
 :::::::::::::::  solution
 
- ## Solution
- Below is a solution for `.github/workflow/main.yml`:
- ```yaml
- name: Code Checks
- on: push
- jobs:
+## Solution
+Below is a solution for `.github/workflow/main.yml`:
+```yaml
+name: Code Checks
+on: push
+jobs:
  
-   test-python-versions:
-     name: Check Python ${{ matrix.python-version }} on Ubuntu
-     runs-on: ubuntu-latest
-     continue-on-error: ${{ matrix.allow_failure }}
-     strategy:
-       fail-fast: false
-       matrix:
-         python-version: ["3.10", "3.11"]
-         allow_failure: [false]
-         include:
-           - python-version: "3.12.0-beta.4"
-             allow_failure: true
+  test-python-versions:
+    name: Check Python ${{ matrix.python-version }} on Ubuntu
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.allow_failure }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+        allow_failure: [false]
+        include:
+          - python-version: "3.12.0-beta.4"
+            allow_failure: true
 
-     steps:
-       - uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
  
-       - name: Setup Python ${{ matrix.python-version }}
-         uses: actions/setup-python@v4
-         with:
-           python-version: ${{ matrix.python-version }}
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
  
-       - name: Install package
-         run: python -m pip install -e .[test]
+      - name: Install package
+        run: python -m pip install -e .[test]
 
-       - name: Test package
-         run: python -m pytest
+      - name: Test package
+        run: python -m pytest
 ```
 
 :::::::::::::::::::::::::
@@ -417,40 +417,40 @@ HINT: You will need a variable under `matrix` that you use for `runs-on` and als
 
 :::::::::::::::  solution
 
- ## Solution
- ```yaml
- name: Code Checks
- on: push
- jobs:
+## Solution
+```yaml
+name: Code Checks
+on: push
+jobs:
  
-   test-python-versions:
-     name: Check Python ${{ matrix.python-version }} on ${{ matrix.runs-on }}
-     continue-on-error: ${{ matrix.allow_failure }}
-     runs-on: ${{ matrix.runs-on }}
-     strategy:
-       fail-fast: false
-       matrix:
-         runs-on: [ubuntu-latest, windows-latest, macos-latest]
-         python-version: ["3.10", "3.11"]
-         allow_failure: [false]
-         include:
-           - python-version: "3.12.0-beta.4"
-             runs-on: ubuntu-latest
-             allow_failure: true
+  test-python-versions:
+    name: Check Python ${{ matrix.python-version }} on ${{ matrix.runs-on }}
+    continue-on-error: ${{ matrix.allow_failure }}
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runs-on: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.10", "3.11"]
+        allow_failure: [false]
+        include:
+          - python-version: "3.12.0-beta.4"
+            runs-on: ubuntu-latest
+            allow_failure: true
 
-     steps:
-       - uses: actions/checkout@v3
- 
-       - name: Setup Python ${{ matrix.python-version }}
-         uses: actions/setup-python@v4
-         with:
-           python-version: ${{ matrix.python-version }}
- 
-       - name: Install package
-         run: python -m pip install -e .[test]
+    steps:
+      - uses: actions/checkout@v3
 
-       - name: Test package
-         run: python -m pytest
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install package
+        run: python -m pip install -e .[test]
+
+      - name: Test package
+        run: python -m pytest
 ```
 
 :::::::::::::::::::::::::
@@ -491,8 +491,6 @@ git pull
 git remote prune origin # prune any branches deleted in the remote / GitHub that are still local
 git branch -D add-ci # optional
 ```
-
-
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
