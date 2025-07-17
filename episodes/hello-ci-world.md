@@ -20,7 +20,7 @@ exercises: 5
 Now, we will be adding a GitHub Actions YAML file to a repository.
 This is all we will need to run CI using GitHub Actions.
 
-If you haven't already, use the [Setup instructions](/setup.md)
+If you haven't already, use the [Setup instructions](https://intersect-training.org/CI-CD/index.html)
 to get the example `intersect-training-cicd` repository setup locally
 and remotely in GitHub.
 
