@@ -287,6 +287,7 @@ Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but all
 ::::::::::::::::::::::::::::::::::::: solution
 
  ## Solution
+ Below is a solution for `.github/workflow/main.yml`:
  ```yaml
  name: Code Checks
  on: push
