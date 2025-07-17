@@ -8,7 +8,6 @@ any links that you are not going to use.
 [rstudio]: https://www.rstudio.com/
 [carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
 
-
 [pytest]: https://docs.pytest.org
 [nox]: https://nox.thea.codes
 [ruff]: https://beta.ruff.rs/docs/
@@ -29,4 +28,8 @@ any links that you are not going to use.
 [actions-checkout-marketplace]: https://github.com/marketplace/actions/checkout
 [actions-checkout-github]: https://github.com/actions/checkout
 [actions-setup-python-github]: https://github.com/actions/setup-python
+
+[dry]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+[runs-on]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+[runner-types]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners
 
