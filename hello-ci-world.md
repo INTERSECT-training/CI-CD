@@ -55,7 +55,7 @@ Since we're adding a new feature (adding CI) to our project, we'll work in a fea
 git checkout -b add-ci
 git add .github/workflows/main.yml
 git commit -m "Adds initial GitHub Actions for CI"
-git push -u origin add-ci
+git push --set-upstream origin add-ci
 ```
 
 And that's it!
