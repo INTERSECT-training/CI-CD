@@ -454,7 +454,7 @@ our project, we’ll work in a feature branch.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> add-ci</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/main.yml</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds initial GitHub Actions for CI"</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-ci</span></code></pre>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--set-upstream</span> origin add-ci</span></code></pre>
 </div>
 <p>And that’s it! You’ve successfully run your CI job and you can view
 the output. You just have to navigate to the GitHub webpage for the
