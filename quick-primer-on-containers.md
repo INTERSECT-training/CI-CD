@@ -114,7 +114,7 @@ The very high-level Docker understanding we need is:
 
 This graphic helps illustrate what we are doing with our `docker build`, `docker run`, `docker pull` and `docker push` commands we will be using:
 
-![Docker arch]({{ page.root }}/fig/docker-architecture.png)
+![Docker arch](fig/docker-architecture.png){alt='Diagram of Docker Architecture'}
 
 [image source](https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html)
 

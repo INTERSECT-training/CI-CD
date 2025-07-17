@@ -176,7 +176,7 @@ Go ahead and merge this in `main` as well.
 
 Then, let's go into the Actions tab and run the Release job from the UI:
 
-![Release manual]({{ page.root }}/fig/python-cd-run-workflow.png)
+![Release manual](fig/python-cd-run-workflow.png){alt='Shows how manually run a job workflow'}
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -193,7 +193,7 @@ Nope!
 
 The `dist` job passes but the `publish` job fails.
 The `publish` job cannot fine the artifact. 
-![Release failing]({{ page.root }}/fig/python-cd-fail.png)
+![Release failing](fig/python-cd-fail.png){alt='Displays an example output of a failed CD action'}
 
 :::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -279,7 +279,7 @@ git push
 
 Perform another manual run for the Releases workflow and check the results!
 
-![Pipeline passes]({{ page.root }}/fig/python-cd-pipeline-pass.png)
+![Pipeline passes](fig/python-cd-pipeline-pass.png){alt='Displays the results of a Release workflow'}
 
 We have a successfful pipeline with the proper dependencies and the artifacts!
 
@@ -304,19 +304,19 @@ If you do not feel comfortable with these tasks, feel free to just read along
 To setup using TestPyPi, we need to:
 * [Register](https://test.pypi.org/account/register/) for an account on TestPyPi
 
-![Register Page]({{ page.root }}/fig/testpypi-register.png)
+![Register Page](fig/testpypi-register.png){alt='Displays the registration page for PyPi'}
 
 * Get an [API token](https://pypi.org/help/#apitoken) so we can have GitHub authenticate to TestPyPi on our behalf. Go to the TestPyPi and [get an API token](https://test.pypi.org/manage/account/#api-tokens)
 
-![Token Page]({{ page.root }}/fig/testpypi-api-token.png)
+![Token Page](fig/testpypi-api-token.png){alt='Displays the token page on PyPi'}
 
 * Go to `Settings` -> `Secrets` -> `Actions` in the GitHub UI
 
-![Secrets Page]({{ page.root }}/fig/github-secrets.png)
+![Secrets Page](fig/github-secrets.png){alt='Shows how to navigate to the page for creating Github Secrets'}
 
 * Add the TestPyPi API token to GitHub Secrets (call it `TEST_PYPI_API_TOKEN`)
 
-![Secrets API Page]({{ page.root }}/fig/github-secrets-api-token.png)
+![Secrets API Page](fig/github-secrets-api-token.png){alt='Displays the Create A Secret page on Github'}
 
 [workflow-dispatch]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
 [release-action]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#release
@@ -353,7 +353,7 @@ If so, change the name of the project to something unique in the pyproject.toml.
 After uploading the following, commiting the changes, and doing a "release",
 you will see something like the following:
 
-![Success actions]({{ page.root }}/fig/testpypi-github-actions-success.png)
+![Success actions](fig/testpypi-github-actions-success.png){alt='Displays the output of a successfull Github Action'}
 
 Also, you can go to your projects page and be able to see the new package show up!
   - [https://test.pypi.org/manage/projects/](https://test.pypi.org/manage/projects/)

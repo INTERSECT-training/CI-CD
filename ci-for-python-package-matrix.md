@@ -129,7 +129,7 @@ git push
 
 Check the output!
 
-![GitHub Actions multi-version]({{ page.root }}/fig/python-ci-matrix-naive-approach.png)
+![GitHub Actions multi-version](fig/python-ci-matrix-naive-approach.png){alt='Displays the output of multi-version Github Actions'}
 
 Now, we do technically have multiple-versions of Python supported.
 
@@ -334,7 +334,7 @@ We see that the overall workflow passed even though the Python 3.12.0-beta.4 job
 Also, note that we see that GitHub Actions reports an exit code that is non-zero!
 Like previously discussed, exit codes are what CI tools / solution are built around.
 
-![GitHub Actions allow failure]({{ page.root }}/fig/python-ci-matrix-allow-failure.png)
+![GitHub Actions allow failure](fig/python-ci-matrix-allow-failure.png){alt='Displays a failed action'}
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -460,7 +460,7 @@ git push
 
 We see that now we are also testing across all the platforms!
 
-![GitHub Actions cross platform]({{ page.root }}/fig/python-ci-matrix-cross-platform.png)
+![GitHub Actions cross platform](fig/python-ci-matrix-cross-platform.png){alt='Displays many cross platform Github Actions'}
 
 ## Pull Request
 
@@ -474,7 +474,7 @@ Once you are happy, let's use our open pull request for this branch and get it m
 You'll notice that the Pull Request shows us that a CI check didn't pass
 but the overall workflow passed and able to be merged in!
 
-![GitHub Actions pull request]({{ page.root }}/fig/python-ci-matrix-cross-platform-pull-request.png)
+![GitHub Actions pull request](fig/python-ci-matrix-cross-platform-pull-request.png){alt='Displays many cross platform actions on the pull request.'}
 
 ## Clean up local repository
 To get your local repository up-to-date, you can run the following:
