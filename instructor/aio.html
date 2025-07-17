@@ -442,7 +442,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -497,9 +497,11 @@ deploying / delivering those changes to your community.</p>
 stage a deployment but wait for a manual action to perform the actual
 deployment. Continous Deployment is if CI passes, there is no manual
 intervention. The deployment will automatically continue.</p>
-<p><img src="../%7B%7B%20page.root%20%7D%7D/fig/atlassian_continous_delivery_vs_continuous_deployment.png" alt="Atlassian image for CD" class="figure"><em>Figure 1. Differences between
-continous delivery vs. continous deployment and their relationship to
-continous integration. Image retrieved from: <a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment" class="external-link">https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment</a></em></p>
+<figure><img src="../fig/atlassian_continous_delivery_vs_continuous_deployment.png" alt="Differences between continous delivery vs. continous deployment and their relationship to continous integration." class="figure mx-auto d-block"><div class="figcaption">Figure 1. Differences between continous delivery
+vs. continous deployment and their relationship to continous
+integration. Image retrieved from: <a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment" class="external-link">HERE</a>
+</div>
+</figure>
 </div>
 <div class="section level1">
 <h1 id="breaking-changes">Breaking Changes<a class="anchor" aria-label="anchor" href="#breaking-changes"></a>
@@ -1298,7 +1300,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-hello-ci-world"><p>Content from <a href="hello-ci-world.html">Hello CI World</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/hello-ci-world.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
@@ -1379,19 +1381,19 @@ our project, we’ll work in a feature branch.</p>
 the output. You just have to navigate to the GitHub webpage for the
 <code>intersect-training-cicd</code> project and hit Actions button.
 There, you will find details of your job (status, output,…).</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/hello-ci-actions-tab.png" alt="GitHub Actions page" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions page</div>
+<figure><img src="../fig/hello-ci-actions-tab.png" alt="where to find the github actions button" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions page</div>
 </figure><p>From this page, click through until you can find the output for the
 successful job run which should look like the following</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/hello-ci-actions-tab-part2.png" alt="GitHub Actions page part 2" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions page part 2</div>
+<figure><img src="../fig/hello-ci-actions-tab-part2.png" alt="how to see the output of a job run via Github Actions" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions page part 2</div>
 </figure></section><section><h2 class="section-heading" id="pull-request">Pull Request<a class="anchor" aria-label="anchor" href="#pull-request"></a>
 </h2>
 <hr class="half-width">
 <p>Lastly, we’ll open up a pull request for this branch, since we plan
 to merge this back into <code>main</code> when we’re happy with the
 first iteration of the Actions.</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/hello-ci-pull-request-create.png" alt="Pull Request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
+<figure><img src="../fig/hello-ci-pull-request-create.png" alt="Displays the screen for creating a pull request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
 </figure><p>See the beauty of the passing CI checks for your pull request!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/hello-ci-pull-request-see-ci.png" alt="Pull Request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
+<figure><img src="../fig/hello-ci-pull-request-see-ci.png" alt="Displays the screen after the jobs have run on a created pull request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
 </figure><div id="dont-merge-yet" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1425,7 +1427,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-ci-for-python-package-unit-test"><p>Content from <a href="ci-for-python-package-unit-test.html">CI for Python Package</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-for-python-package-unit-test.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1469,13 +1471,20 @@ carpentry</a></p>
 </h1>
 <p>Now we will switch from setting up a general CI pipeline to more
 specifically setting up CI for our Python package needs.</p>
-<p>But first… ::::::::::::::::::::::::::::::::::::: challenge</p>
-<div class="section level2">
-<h2 id="activity-what-do-we-need-in-ci-for-a-python-package-project">Activity: What do we need in CI for a Python package project?<a class="anchor" aria-label="anchor" href="#activity-what-do-we-need-in-ci-for-a-python-package-project"></a>
-</h2>
+<p>But first…</p>
+<div id="activity-what-do-we-need-in-ci-for-a-python-package-project" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="activity-what-do-we-need-in-ci-for-a-python-package-project" class="callout-inner">
+<h3 class="callout-title">Activity: What do we need in CI for a Python package project?</h3>
+<div class="callout-content">
 <p>What are some of the things we want to automate checks for in CI for
 a Python Package?</p>
 <p>What tools accomplish these checks?</p>
+</div>
+</div>
+</div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
@@ -1497,7 +1506,6 @@ Documentation builds (i.e. [sphinx][sphinx] ) * Security vulnerabilities
 </div>
 </div>
 </div>
-<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
 <div id="ci-development" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1509,7 +1517,6 @@ Documentation builds (i.e. [sphinx][sphinx] ) * Security vulnerabilities
 add all the checks at the beginning of a project. First, pick the ones
 that are “must haves” or easier to implement. Then, iteratively improve
 your pipeline.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1586,11 +1593,15 @@ tasks.</p>
 repository for the source code ([GitHub][actions-checkout-github]).</p>
 <p>The <code>@v3</code> in <code>actions/checkout@v3</code> signifies
 which version of the <code>actions/checkout</code> to use.</p>
-<p>So… ::::::::::::::::::::::::::::::::::::: challenge</p>
+<p>So…</p>
+<div id="activity-what-does-the-setup-python-action-do" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div class="section level2">
-<h2 id="activity-what-does-the-setup-python-action-do">Activity: What does the <code>setup-python</code> Action do?<a class="anchor" aria-label="anchor" href="#activity-what-does-the-setup-python-action-do"></a>
-</h2>
+<div id="activity-what-does-the-setup-python-action-do" class="callout-inner">
+<h3 class="callout-title">Activity: What does the
+<code>setup-python</code> Action do?</h3>
+<div class="callout-content">
 <p>What do you think the <code>actions/setup-python</code> does?</p>
 <p>Can you find the Marketplace page for
 <code>actions/setup-python</code>?</p>
@@ -1598,6 +1609,9 @@ which version of the <code>actions/checkout</code> to use.</p>
 <code>actions/setup-python</code>?</p>
 <p><em>Bonus:</em> Can you find a file in the GitHub repo that gives you
 all the <code>with</code> options?</p>
+</div>
+</div>
+</div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
@@ -1619,7 +1633,6 @@ is the <code>@v4</code> version of <code>actions.yml</code>: <a href="https://gi
 </div>
 </div>
 </div>
-<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
 </div>
 <div class="section level2">
 <h2 id="running-your-unit-tests-via-ci">Running your unit tests via CI<a class="anchor" aria-label="anchor" href="#running-your-unit-tests-via-ci"></a>
@@ -1666,12 +1679,12 @@ locally.</p>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre>
 </div>
 <p>Checkout the results! We see that we now have two jobs running!:</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-actions.png" alt="Actions" class="figure mx-auto d-block"><div class="figcaption">Actions</div>
+<figure><img src="../fig/python-ci-actions.png" alt="Displays the results of Python CI Actions" class="figure mx-auto d-block"><div class="figcaption">Actions</div>
 </figure><p>We can see the output / results from running <code>pytest</code>:
-<img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-actions-test.png" alt="Actions test" class="figure"></p>
+<img src="../fig/python-ci-actions-test.png" alt="Actions test" class="figure"></p>
 <p>Similarly, we see our open Pull Request has updated dynamically with
 updates!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-pull-request.png" alt="Pull Request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
+<figure><img src="../fig/python-ci-pull-request.png" alt="Displays the results of Python CI Actions on the Pull Request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
 </figure><div id="activity-running-multiple-jobs" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1718,7 +1731,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-ci-for-python-package-matrix"><p>Content from <a href="ci-for-python-package-matrix.html">Matrix</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-for-python-package-matrix.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1868,7 +1881,7 @@ forward!</p>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre>
 </div>
 <p>Check the output!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-matrix-naive-approach.png" alt="GitHub Actions multi-version" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions multi-version</div>
+<figure><img src="../fig/python-ci-matrix-naive-approach.png" alt="Displays the output of multi-version Github Actions" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions multi-version</div>
 </figure><p>Now, we do technically have multiple-versions of Python
 supported.</p>
 <p>Yet, we just added 13 lines of identical code with only one character
@@ -2086,7 +2099,7 @@ git push -u origin add-ci</code></pre>
 <p>Also, note that we see that GitHub Actions reports an exit code that
 is non-zero! Like previously discussed, exit codes are what CI tools /
 solution are built around.</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-matrix-allow-failure.png" alt="GitHub Actions allow failure" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions allow failure</div>
+<figure><img src="../fig/python-ci-matrix-allow-failure.png" alt="Displays a failed action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions allow failure</div>
 </figure><div id="experimental-ci-jobs" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -2227,7 +2240,7 @@ git add .github/workflows/main.yml
 git commit -m "Adds cross-platform testing to CI"
 git push</code></pre>
 <p>We see that now we are also testing across all the platforms!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-matrix-cross-platform.png" alt="GitHub Actions cross platform" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions cross platform</div>
+<figure><img src="../fig/python-ci-matrix-cross-platform.png" alt="Displays many cross platform Github Actions" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions cross platform</div>
 </figure>
 </div>
 <div class="section level2">
@@ -2240,7 +2253,7 @@ checks (i.e. linting, format checks, documentation builds, etc.)</p>
 and get it merged back into <code>main</code>!</p>
 <p>You’ll notice that the Pull Request shows us that a CI check didn’t
 pass but the overall workflow passed and able to be merged in!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-ci-matrix-cross-platform-pull-request.png" alt="GitHub Actions pull request" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions pull request</div>
+<figure><img src="../fig/python-ci-matrix-cross-platform-pull-request.png" alt="Displays many cross platform actions on the pull request." class="figure mx-auto d-block"><div class="figcaption">GitHub Actions pull request</div>
 </figure>
 </div>
 <div class="section level2">
@@ -2279,7 +2292,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-cd-for-python-package"><p>Content from <a href="cd-for-python-package.html">CD for Python Package</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/cd-for-python-package.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -2484,7 +2497,7 @@ run the CD pipeline.</p>
 <p>Go ahead and merge this in <code>main</code> as well.</p>
 <p>Then, let’s go into the Actions tab and run the Release job from the
 UI:</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-cd-run-workflow.png" alt="Release manual" class="figure mx-auto d-block"><div class="figcaption">Release manual</div>
+<figure><img src="../fig/python-cd-run-workflow.png" alt="Shows how manually run a job workflow" class="figure mx-auto d-block"><div class="figcaption">Release manual</div>
 </figure><div id="action-test-out-the-publish-yaml" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2501,11 +2514,11 @@ UI:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Nope!</p>
 <p>The <code>dist</code> job passes but the <code>publish</code> job
-fails. The <code>publish</code> job cannot fine the artifact. <img src="../%7B%7B%20page.root%20%7D%7D/fig/python-cd-fail.png" alt="Release failing" class="figure"></p>
+fails. The <code>publish</code> job cannot fine the artifact. <img src="../fig/python-cd-fail.png" alt="Displays an example output of a failed CD action" class="figure"></p>
 </div>
 </div>
 </div>
@@ -2549,7 +2562,7 @@ run first.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2602,7 +2615,7 @@ run first.</p>
 </div>
 <p>Perform another manual run for the Releases workflow and check the
 results!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/python-cd-pipeline-pass.png" alt="Pipeline passes" class="figure mx-auto d-block"><div class="figcaption">Pipeline passes</div>
+<figure><img src="../fig/python-cd-pipeline-pass.png" alt="Displays the results of a Release workflow" class="figure mx-auto d-block"><div class="figcaption">Pipeline passes</div>
 </figure><p>We have a successfful pipeline with the proper dependencies and the
 artifacts!</p>
 <p>We are ready to swap out the test publishing step with a more
@@ -2630,7 +2643,7 @@ read along</p>
 </div>
 <p>To setup using TestPyPi, we need to: * <a href="https://test.pypi.org/account/register/" class="external-link">Register</a> for an
 account on TestPyPi</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/testpypi-register.png" alt="Register Page" class="figure mx-auto d-block"><div class="figcaption">Register Page</div>
+<figure><img src="../fig/testpypi-register.png" alt="Displays the registration page for PyPi" class="figure mx-auto d-block"><div class="figcaption">Register Page</div>
 </figure><ul>
 <li>Get an <a href="https://pypi.org/help/#apitoken" class="external-link">API token</a> so we
 can have GitHub authenticate to TestPyPi on our behalf. Go to the
@@ -2638,17 +2651,17 @@ TestPyPi and <a href="https://test.pypi.org/manage/account/#api-tokens" class="e
 token</a>
 </li>
 </ul>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/testpypi-api-token.png" alt="Token Page" class="figure mx-auto d-block"><div class="figcaption">Token Page</div>
+<figure><img src="../fig/testpypi-api-token.png" alt="Displays the token page on PyPi" class="figure mx-auto d-block"><div class="figcaption">Token Page</div>
 </figure><ul>
 <li>Go to <code>Settings</code> -&gt; <code>Secrets</code> -&gt;
 <code>Actions</code> in the GitHub UI</li>
 </ul>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/github-secrets.png" alt="Secrets Page" class="figure mx-auto d-block"><div class="figcaption">Secrets Page</div>
+<figure><img src="../fig/github-secrets.png" alt="Shows how to navigate to the page for creating Github Secrets" class="figure mx-auto d-block"><div class="figcaption">Secrets Page</div>
 </figure><ul>
 <li>Add the TestPyPi API token to GitHub Secrets (call it
 <code>TEST_PYPI_API_TOKEN</code>)</li>
 </ul>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/github-secrets-api-token.png" alt="Secrets API Page" class="figure mx-auto d-block"><div class="figcaption">Secrets API Page</div>
+<figure><img src="../fig/github-secrets-api-token.png" alt="Displays the Create A Secret page on Github" class="figure mx-auto d-block"><div class="figcaption">Secrets API Page</div>
 </figure><p>Now that we have the credentials in GitHub for our PyPi package
 repository, let us write out the YAML.</p>
 </div>
@@ -2682,7 +2695,7 @@ something unique in the pyproject.toml.</p>
 </div>
 <p>After uploading the following, commiting the changes, and doing a
 “release”, you will see something like the following:</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/testpypi-github-actions-success.png" alt="Success actions" class="figure mx-auto d-block"><div class="figcaption">Success actions</div>
+<figure><img src="../fig/testpypi-github-actions-success.png" alt="Displays the output of a successfull Github Action" class="figure mx-auto d-block"><div class="figcaption">Success actions</div>
 </figure><p>Also, you can go to your projects page and be able to see the new
 package show up! - <a href="https://test.pypi.org/manage/projects/" class="external-link">https://test.pypi.org/manage/projects/</a></p>
 </div>
@@ -2714,7 +2727,7 @@ any links that you are not going to use.
  -->
 </div></section><section id="aio-add-badges"><p>Content from <a href="add-badges.html">Badge for CI/CD</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/add-badges.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -2788,7 +2801,7 @@ README markdown files! Just replace: * OWNER * REPOSITORY * YAML</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">![example</span> workflow]<span class="er">(</span><span class="ex">https://github.com/marshallmcdonnell/intersect-training-cicd/actions/workflows/main.yaml/badge.svg</span><span class="kw">)</span></span></code></pre>
 </div>
-<p>Which will give you something like: <img src="../fig/github-actions-badge.png" alt="badge" class="figure"></p>
+<p>Which will give you something like: <img src="../fig/github-actions-badge.png" alt="Displays a created badge for your README file." class="figure"></p>
 <p>If you like, feel free to add one to your repository.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -2869,7 +2882,7 @@ what form is it in? Which is your favorite form of documentation?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Examples </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Websites, like on [ReadTheDocs][rtd] (example: <a href="https://numpy.readthedocs.io/en/latest/" class="external-link">NumPy docs</a>)</li>
@@ -2918,7 +2931,7 @@ webpage, what are your answers to the questions above?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>For CI: we want to automate building the documetation HTML
@@ -2959,7 +2972,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-quick-primer-on-containers"><p>Content from <a href="quick-primer-on-containers.html">(Bonus) Quick primer on Containers</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/quick-primer-on-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
@@ -3108,7 +3121,7 @@ contianer image via
 <code>docker build</code>, <code>docker run</code>,
 <code>docker pull</code> and <code>docker push</code> commands we will
 be using:</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/docker-architecture.png" alt="Docker arch" class="figure mx-auto d-block"><div class="figcaption">Docker arch</div>
+<figure><img src="../fig/docker-architecture.png" alt="Diagram of Docker Architecture" class="figure mx-auto d-block"><div class="figcaption">Docker arch</div>
 </figure><p><a href="https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html" class="external-link">image
 source</a></p>
 <div class="section level2">
@@ -3139,7 +3152,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-ci-cd-for-documentation-using-containers"><p>Content from <a href="ci-cd-for-documentation-using-containers.html">(Bonus) Implementing CI/CD for documentation using containers</a></p>
 <hr>
-<p>Last updated on 2025-06-18 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-cd-for-documentation-using-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -3233,7 +3246,7 @@ command which directory to use.</p>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds job to build docs in CI via docker"</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
 </div>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/docker-ci-docs.png" alt="GitHub Actions docs CI" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CI</div>
+<figure><img src="../fig/docker-ci-docs.png" alt="Displays the output of a CI Github Action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CI</div>
 </figure><p>So we are successfully building our container image in CI!</p>
 <p>Now, we need to publish this image via CD. This is equivalent to
 pushing the container image to a container image registry.</p>
@@ -3348,14 +3361,14 @@ sort of “version number” (i.e. <code>add-docs-cd</code> or
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds CD for docs to container image registry"</span></span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
 </div>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/github-container-package-cd.png" alt="GitHub Actions docs CD" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CD</div>
+<figure><img src="../fig/github-container-package-cd.png" alt="Displays the output of a Github Action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CD</div>
 </figure><p>Looks like it passed!</p>
 <p>And if we look at the “Packages” tab in GitHub, we should see our
 package!</p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/github-container-package.png" alt="GitHub Actions docs package" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
+<figure><img src="../fig/github-container-package.png" alt="Shows how to navigate to Action packages" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
 </figure><p>Going into the package, we can see our Users are given instructions
 on how to get this container via <code>docker pull</code></p>
-<figure><img src="../%7B%7B%20page.root%20%7D%7D/fig/github-container-package-page.png" alt="GitHub Actions docs package" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
+<figure><img src="../fig/github-container-package-page.png" alt="Displays an open action package" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
 </figure><p>We can launch this container, mapping from the container port 80
 (HTTP) to one on our host machine (8080), to spin up our docs
 server!</p>
@@ -3480,9 +3493,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://INTERSECT-training.github.io/CI-CD/instructor/aio.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/instructor/aio.html",
-  "dateCreated": "2025-06-18",
-  "dateModified": "2025-07-15",
-  "datePublished": "2025-07-15"
+  "dateCreated": "2025-07-17",
+  "dateModified": "2025-07-17",
+  "datePublished": "2025-07-17"
 }
 
   </script><script>

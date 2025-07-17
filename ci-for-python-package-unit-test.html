@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>CI for Python Package</h1>
-        <p>Last updated on 2025-06-18 |
+        <p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-for-python-package-unit-test.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -416,12 +416,20 @@ carpentry</a></p>
 <h1 id="setup-ci">Setup CI<a class="anchor" aria-label="anchor" href="#setup-ci"></a></h1>
 <p>Now we will switch from setting up a general CI pipeline to more
 specifically setting up CI for our Python package needs.</p>
-<p>But first… ::::::::::::::::::::::::::::::::::::: challenge</p>
-<div class="section level2">
-<h2 id="activity-what-do-we-need-in-ci-for-a-python-package-project">Activity: What do we need in CI for a Python package project?<a class="anchor" aria-label="anchor" href="#activity-what-do-we-need-in-ci-for-a-python-package-project"></a></h2>
+<p>But first…</p>
+<div id="activity-what-do-we-need-in-ci-for-a-python-package-project" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="activity-what-do-we-need-in-ci-for-a-python-package-project" class="callout-inner">
+<h3 class="callout-title">Activity: What do we need in CI for a Python package project?</h3>
+<div class="callout-content">
 <p>What are some of the things we want to automate checks for in CI for
 a Python Package?</p>
 <p>What tools accomplish these checks?</p>
+</div>
+</div>
+</div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
@@ -443,7 +451,6 @@ Documentation builds (i.e. [sphinx][sphinx] ) * Security vulnerabilities
 </div>
 </div>
 </div>
-<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
 <div id="ci-development" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -455,7 +462,6 @@ Documentation builds (i.e. [sphinx][sphinx] ) * Security vulnerabilities
 add all the checks at the beginning of a project. First, pick the ones
 that are “must haves” or easier to implement. Then, iteratively improve
 your pipeline.</p>
-</div>
 </div>
 </div>
 </div>
@@ -531,10 +537,15 @@ tasks.</p>
 repository for the source code ([GitHub][actions-checkout-github]).</p>
 <p>The <code>@v3</code> in <code>actions/checkout@v3</code> signifies
 which version of the <code>actions/checkout</code> to use.</p>
-<p>So… ::::::::::::::::::::::::::::::::::::: challenge</p>
+<p>So…</p>
+<div id="activity-what-does-the-setup-python-action-do" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div class="section level2">
-<h2 id="activity-what-does-the-setup-python-action-do">Activity: What does the <code>setup-python</code> Action do?<a class="anchor" aria-label="anchor" href="#activity-what-does-the-setup-python-action-do"></a></h2>
+<div id="activity-what-does-the-setup-python-action-do" class="callout-inner">
+<h3 class="callout-title">Activity: What does the
+<code>setup-python</code> Action do?</h3>
+<div class="callout-content">
 <p>What do you think the <code>actions/setup-python</code> does?</p>
 <p>Can you find the Marketplace page for
 <code>actions/setup-python</code>?</p>
@@ -542,6 +553,9 @@ which version of the <code>actions/checkout</code> to use.</p>
 <code>actions/setup-python</code>?</p>
 <p><em>Bonus:</em> Can you find a file in the GitHub repo that gives you
 all the <code>with</code> options?</p>
+</div>
+</div>
+</div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
@@ -561,7 +575,6 @@ is the <code>@v4</code> version of <code>actions.yml</code>: <a href="https://gi
 </div>
 </div>
 </div>
-<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
 </div>
 <div class="section level2">
 <h2 id="running-your-unit-tests-via-ci">Running your unit tests via CI<a class="anchor" aria-label="anchor" href="#running-your-unit-tests-via-ci"></a></h2>
@@ -607,12 +620,12 @@ locally.</p>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre>
 </div>
 <p>Checkout the results! We see that we now have two jobs running!:</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/python-ci-actions.png" alt="Actions" class="figure mx-auto d-block"><div class="figcaption">Actions</div>
+<figure><img src="fig/python-ci-actions.png" alt="Displays the results of Python CI Actions" class="figure mx-auto d-block"><div class="figcaption">Actions</div>
 </figure><p>We can see the output / results from running <code>pytest</code>:
-<img src="%7B%7B%20page.root%20%7D%7D/fig/python-ci-actions-test.png" alt="Actions test" class="figure"></p>
+<img src="fig/python-ci-actions-test.png" alt="Actions test" class="figure"></p>
 <p>Similarly, we see our open Pull Request has updated dynamically with
 updates!</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/python-ci-pull-request.png" alt="Pull Request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
+<figure><img src="fig/python-ci-pull-request.png" alt="Displays the results of Python CI Actions on the Pull Request" class="figure mx-auto d-block"><div class="figcaption">Pull Request</div>
 </figure><div id="activity-running-multiple-jobs" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -716,9 +729,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://INTERSECT-training.github.io/CI-CD/ci-for-python-package-unit-test.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/ci-for-python-package-unit-test.html",
-  "dateCreated": "2025-06-18",
-  "dateModified": "2025-06-18",
-  "datePublished": "2025-07-15"
+  "dateCreated": "2025-07-17",
+  "dateModified": "2025-07-17",
+  "datePublished": "2025-07-17"
 }
 
   </script><script>

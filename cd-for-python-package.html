@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>CD for Python Package</h1>
-        <p>Last updated on 2025-06-18 |
+        <p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/cd-for-python-package.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -571,7 +571,7 @@ run the CD pipeline.</p>
 <p>Go ahead and merge this in <code>main</code> as well.</p>
 <p>Then, let’s go into the Actions tab and run the Release job from the
 UI:</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/python-cd-run-workflow.png" alt="Release manual" class="figure mx-auto d-block"><div class="figcaption">Release manual</div>
+<figure><img src="fig/python-cd-run-workflow.png" alt="Shows how manually run a job workflow" class="figure mx-auto d-block"><div class="figcaption">Release manual</div>
 </figure><div id="action-test-out-the-publish-yaml" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -588,11 +588,11 @@ UI:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Nope!</p>
 <p>The <code>dist</code> job passes but the <code>publish</code> job
-fails. The <code>publish</code> job cannot fine the artifact. <img src="%7B%7B%20page.root%20%7D%7D/fig/python-cd-fail.png" alt="Release failing" class="figure"></p>
+fails. The <code>publish</code> job cannot fine the artifact. <img src="fig/python-cd-fail.png" alt="Displays an example output of a failed CD action" class="figure"></p>
 </div>
 </div>
 </div>
@@ -636,7 +636,7 @@ run first.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -689,7 +689,7 @@ run first.</p>
 </div>
 <p>Perform another manual run for the Releases workflow and check the
 results!</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/python-cd-pipeline-pass.png" alt="Pipeline passes" class="figure mx-auto d-block"><div class="figcaption">Pipeline passes</div>
+<figure><img src="fig/python-cd-pipeline-pass.png" alt="Displays the results of a Release workflow" class="figure mx-auto d-block"><div class="figcaption">Pipeline passes</div>
 </figure><p>We have a successfful pipeline with the proper dependencies and the
 artifacts!</p>
 <p>We are ready to swap out the test publishing step with a more
@@ -715,19 +715,19 @@ read along</p>
 </div>
 <p>To setup using TestPyPi, we need to: * <a href="https://test.pypi.org/account/register/" class="external-link">Register</a> for an
 account on TestPyPi</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/testpypi-register.png" alt="Register Page" class="figure mx-auto d-block"><div class="figcaption">Register Page</div>
+<figure><img src="fig/testpypi-register.png" alt="Displays the registration page for PyPi" class="figure mx-auto d-block"><div class="figcaption">Register Page</div>
 </figure><ul><li>Get an <a href="https://pypi.org/help/#apitoken" class="external-link">API token</a> so we
 can have GitHub authenticate to TestPyPi on our behalf. Go to the
 TestPyPi and <a href="https://test.pypi.org/manage/account/#api-tokens" class="external-link">get an API
 token</a>
 </li>
-</ul><figure><img src="%7B%7B%20page.root%20%7D%7D/fig/testpypi-api-token.png" alt="Token Page" class="figure mx-auto d-block"><div class="figcaption">Token Page</div>
+</ul><figure><img src="fig/testpypi-api-token.png" alt="Displays the token page on PyPi" class="figure mx-auto d-block"><div class="figcaption">Token Page</div>
 </figure><ul><li>Go to <code>Settings</code> -&gt; <code>Secrets</code> -&gt;
 <code>Actions</code> in the GitHub UI</li>
-</ul><figure><img src="%7B%7B%20page.root%20%7D%7D/fig/github-secrets.png" alt="Secrets Page" class="figure mx-auto d-block"><div class="figcaption">Secrets Page</div>
+</ul><figure><img src="fig/github-secrets.png" alt="Shows how to navigate to the page for creating Github Secrets" class="figure mx-auto d-block"><div class="figcaption">Secrets Page</div>
 </figure><ul><li>Add the TestPyPi API token to GitHub Secrets (call it
 <code>TEST_PYPI_API_TOKEN</code>)</li>
-</ul><figure><img src="%7B%7B%20page.root%20%7D%7D/fig/github-secrets-api-token.png" alt="Secrets API Page" class="figure mx-auto d-block"><div class="figcaption">Secrets API Page</div>
+</ul><figure><img src="fig/github-secrets-api-token.png" alt="Displays the Create A Secret page on Github" class="figure mx-auto d-block"><div class="figcaption">Secrets API Page</div>
 </figure><p>Now that we have the credentials in GitHub for our PyPi package
 repository, let us write out the YAML.</p>
 </div>
@@ -760,7 +760,7 @@ something unique in the pyproject.toml.</p>
 </div>
 <p>After uploading the following, commiting the changes, and doing a
 “release”, you will see something like the following:</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/testpypi-github-actions-success.png" alt="Success actions" class="figure mx-auto d-block"><div class="figcaption">Success actions</div>
+<figure><img src="fig/testpypi-github-actions-success.png" alt="Displays the output of a successfull Github Action" class="figure mx-auto d-block"><div class="figcaption">Success actions</div>
 </figure><p>Also, you can go to your projects page and be able to see the new
 package show up! - <a href="https://test.pypi.org/manage/projects/" class="external-link">https://test.pypi.org/manage/projects/</a></p>
 </div>
@@ -848,9 +848,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://INTERSECT-training.github.io/CI-CD/cd-for-python-package.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/cd-for-python-package.html",
-  "dateCreated": "2025-06-18",
-  "dateModified": "2025-06-18",
-  "datePublished": "2025-07-15"
+  "dateCreated": "2025-07-17",
+  "dateModified": "2025-07-17",
+  "datePublished": "2025-07-17"
 }
 
   </script><script>

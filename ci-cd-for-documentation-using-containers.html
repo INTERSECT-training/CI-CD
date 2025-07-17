@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>(Bonus) Implementing CI/CD for documentation using containers</h1>
-        <p>Last updated on 2025-06-18 |
+        <p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-cd-for-documentation-using-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -467,7 +467,7 @@ command which directory to use.</p>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds job to build docs in CI via docker"</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
 </div>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/docker-ci-docs.png" alt="GitHub Actions docs CI" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CI</div>
+<figure><img src="fig/docker-ci-docs.png" alt="Displays the output of a CI Github Action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CI</div>
 </figure><p>So we are successfully building our container image in CI!</p>
 <p>Now, we need to publish this image via CD. This is equivalent to
 pushing the container image to a container image registry.</p>
@@ -580,14 +580,14 @@ sort of “version number” (i.e. <code>add-docs-cd</code> or
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds CD for docs to container image registry"</span></span>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
 </div>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/github-container-package-cd.png" alt="GitHub Actions docs CD" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CD</div>
+<figure><img src="fig/github-container-package-cd.png" alt="Displays the output of a Github Action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CD</div>
 </figure><p>Looks like it passed!</p>
 <p>And if we look at the “Packages” tab in GitHub, we should see our
 package!</p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/github-container-package.png" alt="GitHub Actions docs package" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
+<figure><img src="fig/github-container-package.png" alt="Shows how to navigate to Action packages" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
 </figure><p>Going into the package, we can see our Users are given instructions
 on how to get this container via <code>docker pull</code></p>
-<figure><img src="%7B%7B%20page.root%20%7D%7D/fig/github-container-package-page.png" alt="GitHub Actions docs package" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
+<figure><img src="fig/github-container-package-page.png" alt="Displays an open action package" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs package</div>
 </figure><p>We can launch this container, mapping from the container port 80
 (HTTP) to one on our host machine (8080), to spin up our docs
 server!</p>
@@ -721,9 +721,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://INTERSECT-training.github.io/CI-CD/ci-cd-for-documentation-using-containers.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/ci-cd-for-documentation-using-containers.html",
-  "dateCreated": "2025-06-18",
-  "dateModified": "2025-06-18",
-  "datePublished": "2025-07-15"
+  "dateCreated": "2025-07-17",
+  "dateModified": "2025-07-17",
+  "datePublished": "2025-07-17"
 }
 
   </script><script>
