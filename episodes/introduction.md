@@ -78,10 +78,11 @@ For today's lesson, we'll only focus on GitHub's solution (GitHub Actions). Howe
 *Why are we picking GitHub Actions?!?*
 
 A few quick reasons that this was select is:
-  * If you already use GitHub for version control, you do not have to have a 3rd party integration for your CI/CD solution; this usually requires storing secrets between GitHub and CI/CD solution, which can be problematic if security breaches happen (example of such an event [here](https://github.blog/2022-04-15-security-alert-stolen-oauth-user-tokens/))
-  * GitHub Actions is completely free for open source and free with limits for private repos! 
-  * Servers / runners are provided for multiple operating systems.
-  * US-RSE uses GitHub Actions on projects like the [website](https://github.com/USRSE/usrse.github.io)! So you will learn about one of the CI solutions used by the association! 
+
+- If you already use GitHub for version control, you do not have to have a 3rd party integration for your CI/CD solution; this usually requires storing secrets between GitHub and CI/CD solution, which can be problematic if security breaches happen (example of such an event [here](https://github.blog/2022-04-15-security-alert-stolen-oauth-user-tokens/))
+- GitHub Actions is completely free for open source and free with limits for private repos! 
+- Servers / runners are provided for multiple operating systems.
+- US-RSE uses GitHub Actions on projects like the [website](https://github.com/USRSE/usrse.github.io)! So you will learn about one of the CI solutions used by the association! 
 
 
 
