@@ -2060,52 +2060,72 @@ we need something like:</p>
 </div>
 </div>
 <p>Now to add it…</p>
-<p>::::::::::::::::::::::::::::::::::::: challenge</p>
+<div id="action-add-experimental-job-that-is-allowed-to-fail-in-the-matrix" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-</div>
-<div class="section level2">
-<h2 id="action-add-experimental-job-that-is-allowed-to-fail-in-the-matrix">Action: Add experimental job that is allowed to fail in the
-matrix<a class="anchor" aria-label="anchor" href="#action-add-experimental-job-that-is-allowed-to-fail-in-the-matrix"></a>
-</h2>
+<div id="action-add-experimental-job-that-is-allowed-to-fail-in-the-matrix" class="callout-inner">
+<h3 class="callout-title">Action: Add experimental job that is allowed to fail in the matrix</h3>
+<div class="callout-content">
 <p>Add “3.12.0-beta.4” to our current Python package CI YAML via the
 matrix but allow it to fail.</p>
-<p>::::::::::::::: solution</p>
-<p>## Solution Below is a solution for
-<code>.github/workflow/main.yml</code>: ```yaml name: Code Checks on:
-push jobs:</p>
-<p>test-python-versions: name: Check Python ${{ matrix.python-version }}
-on Ubuntu runs-on: ubuntu-latest continue-on-error: ${{
-matrix.allow_failure }} strategy: fail-fast: false matrix:
-python-version: [“3.10”, “3.11”] allow_failure: [false] include: -
-python-version: “3.12.0-beta.4” allow_failure: true</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a> <span class="ex">steps:</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>   <span class="ex">-</span> uses: actions/checkout@v3</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>   <span class="ex">-</span> name: Setup Python <span class="va">${</span><span class="er">{ matrix.python-version </span><span class="va">}</span>}</span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>     <span class="ex">uses:</span> actions/setup-python@v4</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>     <span class="ex">with:</span></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>       <span class="ex">python-version:</span> <span class="va">${</span><span class="er">{ matrix.python-version </span><span class="va">}</span>}</span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>   <span class="ex">-</span> name: Install package</span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>     <span class="ex">run:</span> python <span class="at">-m</span> pip install <span class="at">-e</span> .<span class="pp">[</span><span class="ss">test</span><span class="pp">]</span></span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>   <span class="ex">-</span> name: Test package</span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>     <span class="ex">run:</span> python <span class="at">-m</span> pytest</span></code></pre>
 </div>
-<pre><code>
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Let's commit this and see how it looks!
-
-```bash
-git add .github/workflows/main.yml
-git commit -m "Adds experimental Python 3.12.0-beta.4 test to CI"
-git push -u origin add-ci</code></pre>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>Below is a solution for <code>.github/workflow/main.yml</code>:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Code Checks</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> push</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="at"> </span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="at">  </span><span class="fu">test-python-versions</span><span class="kw">:</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check Python ${{ matrix.python-version }} on Ubuntu</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="at">    </span><span class="fu">continue-on-error</span><span class="kw">:</span><span class="at"> ${{ matrix.allow_failure }}</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="at">    </span><span class="fu">strategy</span><span class="kw">:</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="at">      </span><span class="fu">fail-fast</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="at">      </span><span class="fu">matrix</span><span class="kw">:</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"3.10"</span><span class="kw">,</span><span class="at"> </span><span class="st">"3.11"</span><span class="kw">]</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="at">        </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="ch">false</span><span class="kw">]</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="at">        </span><span class="fu">include</span><span class="kw">:</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12.0-beta.4"</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="at">            </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span></span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a><span class="at"> </span></span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Setup Python ${{ matrix.python-version }}</span></span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v4</span></span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> ${{ matrix.python-version }}</span></span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="at"> </span></span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install package</span></span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m pip install -e .[test]</span></span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Test package</span></span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m pytest</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Let’s commit this and see how it looks!</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/main.yml</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds experimental Python 3.12.0-beta.4 test to CI"</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-ci</span></code></pre>
+</div>
 <p>We see that the overall workflow passed even though the Python
 3.12.0-beta.4 job failed!</p>
 <p>Also, note that we see that GitHub Actions reports an exit code that
@@ -2121,6 +2141,7 @@ solution are built around.</p>
 <div class="callout-content">
 <p>This allows us to run all kinds of “experimental” jobs. Examples are
 trying new versions of software or checking deprecated versions.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2156,12 +2177,12 @@ for Linux, Mac, and Windows.</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ul>
 <li>Linux: <code>ubuntu-latest</code>
@@ -2204,55 +2225,79 @@ longer available!</p>
 </div>
 </div>
 </div>
-<p>::::::::::::::::::::::::::::::::::::: challenge</p>
+<div id="action-add-cross-platform-testing-to-ci-yaml" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-</div>
-<div class="section level2">
-<h2 id="action-add-cross-platform-testing-to-ci-yaml">Action: Add cross-platform testing to CI YAML<a class="anchor" aria-label="anchor" href="#action-add-cross-platform-testing-to-ci-yaml"></a>
-</h2>
+<div id="action-add-cross-platform-testing-to-ci-yaml" class="callout-inner">
+<h3 class="callout-title">Action: Add cross-platform testing to CI YAML</h3>
+<div class="callout-content">
 <p>Using the “latest” labels, add Linux, Mac, and Windows testing to our
 current CI YAML.</p>
 <p>HINT: You will need a variable under <code>matrix</code> that you use
 for <code>runs-on</code> and also for the <code>include</code></p>
-<p>::::::::::::::: solution</p>
-<p>## Solution ```yaml name: Code Checks on: push jobs:</p>
-<p>test-python-versions: name: Check Python ${{ matrix.python-version }}
-on ${{ matrix.runs-on }} continue-on-error: ${{ matrix.allow_failure }}
-runs-on: ${{ matrix.runs-on }} strategy: fail-fast: false matrix:
-runs-on: [ubuntu-latest, windows-latest, macos-latest] python-version:
-[“3.10”, “3.11”] allow_failure: [false] include: - python-version:
-“3.12.0-beta.4” runs-on: ubuntu-latest allow_failure: true</p>
-<div class="codewrapper sourceCode" id="cb13">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a> <span class="ex">steps:</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>   <span class="ex">-</span> uses: actions/checkout@v3</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>   <span class="ex">-</span> name: Setup Python <span class="va">${</span><span class="er">{ matrix.python-version </span><span class="va">}</span>}</span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>     <span class="ex">uses:</span> actions/setup-python@v4</span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>     <span class="ex">with:</span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>       <span class="ex">python-version:</span> <span class="va">${</span><span class="er">{ matrix.python-version </span><span class="va">}</span>}</span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>   <span class="ex">-</span> name: Install package</span>
-<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>     <span class="ex">run:</span> python <span class="at">-m</span> pip install <span class="at">-e</span> .<span class="pp">[</span><span class="ss">test</span><span class="pp">]</span></span>
-<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a>   <span class="ex">-</span> name: Test package</span>
-<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a>     <span class="ex">run:</span> python <span class="at">-m</span> pytest</span></code></pre>
 </div>
-<pre><code>
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Let's push these changes and see how it goes!
-
-```bash
-git add .github/workflows/main.yml
-git commit -m "Adds cross-platform testing to CI"
-git push</code></pre>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Code Checks</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> push</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="at"> </span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="at">  </span><span class="fu">test-python-versions</span><span class="kw">:</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check Python ${{ matrix.python-version }} on ${{ matrix.runs-on }}</span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="at">    </span><span class="fu">continue-on-error</span><span class="kw">:</span><span class="at"> ${{ matrix.allow_failure }}</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ${{ matrix.runs-on }}</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a><span class="at">    </span><span class="fu">strategy</span><span class="kw">:</span></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="at">      </span><span class="fu">fail-fast</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="at">      </span><span class="fu">matrix</span><span class="kw">:</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a><span class="at">        </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">ubuntu-latest</span><span class="kw">,</span><span class="at"> windows-latest</span><span class="kw">,</span><span class="at"> macos-latest</span><span class="kw">]</span></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"3.10"</span><span class="kw">,</span><span class="at"> </span><span class="st">"3.11"</span><span class="kw">]</span></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a><span class="at">        </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="ch">false</span><span class="kw">]</span></span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a><span class="at">        </span><span class="fu">include</span><span class="kw">:</span></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12.0-beta.4"</span></span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="at">            </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a><span class="at">            </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span></span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Setup Python ${{ matrix.python-version }}</span></span>
+<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v4</span></span>
+<span id="cb13-25"><a href="#cb13-25" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb13-26"><a href="#cb13-26" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> ${{ matrix.python-version }}</span></span>
+<span id="cb13-27"><a href="#cb13-27" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install package</span></span>
+<span id="cb13-29"><a href="#cb13-29" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m pip install -e .[test]</span></span>
+<span id="cb13-30"><a href="#cb13-30" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Test package</span></span>
+<span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m pytest</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Let’s push these changes and see how it goes!</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/main.yml</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds cross-platform testing to CI"</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre>
+</div>
 <p>We see that now we are also testing across all the platforms!</p>
 <figure><img src="fig/python-ci-matrix-cross-platform.png" alt="Displays many cross platform Github Actions" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions cross platform</div>
 </figure>
+</div>
 </div>
 <div class="section level2">
 <h2 id="pull-request">Pull Request<a class="anchor" aria-label="anchor" href="#pull-request"></a>
@@ -2890,7 +2935,7 @@ what form is it in? Which is your favorite form of documentation?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Examples </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Websites, like on [ReadTheDocs][rtd] (example: <a href="https://numpy.readthedocs.io/en/latest/" class="external-link">NumPy docs</a>)</li>
@@ -2939,7 +2984,7 @@ webpage, what are your answers to the questions above?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>For CI: we want to automate building the documetation HTML
