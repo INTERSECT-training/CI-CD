@@ -159,7 +159,7 @@ on: push
 jobs:
 
   test-python-versions:
-    name: Check Python {% raw %}${{ matrix.python-version }}{% endraw %} on Ubuntu
+    name: Check Python ${{ matrix.python-version }} on Ubuntu
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -167,10 +167,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Python {% raw %}${{ matrix.python-version }}{% endraw %}
+      - name: Setup Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
-          python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
+          python-version: ${{ matrix.python-version }}
 
       - name: Install package
         run: python -m pip install -e .[test]
@@ -264,7 +264,7 @@ Then the following would work for a job:
 jobs:
    job:
      runs-on: ubuntu-latest
-     continue-on-error: {% raw %}${{ matrix.allow_failure }}{% endraw %}
+     continue-on-error: ${{ matrix.allow_failure }}
      strategy:
        fail-fast: false 
        matrix:
@@ -277,6 +277,7 @@ jobs:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+Now to add it...
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -293,9 +294,9 @@ Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but all
  jobs:
  
    test-python-versions:
-     name: Check Python {% raw %}${{ matrix.python-version }}{% endraw %} on Ubuntu
+     name: Check Python ${{ matrix.python-version }} on Ubuntu
      runs-on: ubuntu-latest
-     continue-on-error: {% raw %}${{ matrix.allow_failure }}{% endraw %}
+     continue-on-error: ${{ matrix.allow_failure }}
      strategy:
        fail-fast: false
        matrix:
@@ -308,10 +309,10 @@ Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but all
      steps:
        - uses: actions/checkout@v3
  
-       - name: Setup Python {% raw %}${{ matrix.python-version }}{% endraw %}
+       - name: Setup Python ${{ matrix.python-version }}
          uses: actions/setup-python@v4
          with:
-           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
+           python-version: ${{ matrix.python-version }}
  
        - name: Install package
          run: python -m pip install -e .[test]
