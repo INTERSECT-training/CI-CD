@@ -72,7 +72,7 @@ Then, iteratively improve your pipeline.
 
 As of right now, your `.github/workflows/main.yml` YAML file should look like
 ```yaml
-name: Code Checks
+name: example
 on: push
 jobs:
   greeting:
