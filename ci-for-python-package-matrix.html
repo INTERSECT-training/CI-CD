@@ -471,7 +471,7 @@ as well.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -533,9 +533,9 @@ supported.</p>
 change…</p>
 <div class="section level2">
 <h2 id="dry-your-ci">DRY your CI<a class="anchor" aria-label="anchor" href="#dry-your-ci"></a></h2>
-<p>“DRY” is an ancronym for [“Don’t Repeat Yourself”][dry], meaning
-don’t have repeated code in your software. This reduces repetition and
-avoids redundancy.</p>
+<p>“DRY” is an ancronym for <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" class="external-link">“Don’t
+Repeat Yourself”</a>, meaning don’t have repeated code in your software.
+This reduces repetition and avoids redundancy.</p>
 <p>We do this for our software. There is no reason we should not apply
 this principle to CI!</p>
 </div>
@@ -764,12 +764,12 @@ member has Mac.</p>
 (i.e. cross-platform)?</p>
 <div class="section level3">
 <h3 id="selecting-the-github-hosted-runner-platform">Selecting the GitHub-hosted runner platform<a class="anchor" aria-label="anchor" href="#selecting-the-github-hosted-runner-platform"></a></h3>
-<p>We honestly already have what we need, the
-[<code>runs-on</code>][runs-on] command!</p>
+<p>We honestly already have what we need, the <a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on" class="external-link"><code>runs-on</code></a>
+command!</p>
 <p>All we need to know is what values are allowed.</p>
 <p>Inside of the <code>runs-on</code> documentation, there is a list of
-labels we can use to select the platform of the runner: [list of labels
-for runner types][runner-types]</p>
+labels we can use to select the platform of the runner: <a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners" class="external-link">list
+of labels for runner types</a></p>
 <div id="action-find-out-the-labels-for-all-three-platforms" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -787,7 +787,7 @@ for Linux, Mac, and Windows.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul><li>Linux: <code>ubuntu-latest</code>
 </li>
