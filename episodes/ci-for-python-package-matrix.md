@@ -75,9 +75,10 @@ Have this new job:
 - Install the package with our test dependencies
 - Run the tests via `pytest`
 
-::::::::::::::::::::::::::::::::::::: solution
+:::::::::::::::  solution
 
 ## Solution
+
 ```yaml
 name: Code Checks
 on: push
@@ -116,8 +117,9 @@ jobs:
         run: python -m pytest
 ```
 
-:::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 Now, let's add this so we can catch any Python 3.11 bugs going forward!
@@ -284,7 +286,7 @@ Now to add it...
 ## Action: Add experimental job that is allowed to fail in the matrix
 Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but allow it to fail.
 
-::::::::::::::::::::::::::::::::::::: solution
+:::::::::::::::  solution
 
  ## Solution
  Below is a solution for `.github/workflow/main.yml`:
@@ -321,8 +323,9 @@ Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but all
          run: python -m pytest
 ```
 
-:::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Let's commit this and see how it looks!
 
@@ -373,15 +376,16 @@ Inside of the `runs-on` documentation, there is a list of labels we can use to s
 
 Using the documentation links above, get the three "latest" labels for Linux, Mac, and Windows.
 
-::::::::::::::::::::::::::::::::::::: solution
+:::::::::::::::  solution
 
 ## Solution
 * Linux: `ubuntu-latest`
 * Mac: `macos-latest`
 * Windows: `windows-latest`
 
-:::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Using these labels, we could create the following setup to run on all three platforms!
 ```yaml
@@ -411,7 +415,7 @@ Using the "latest" labels, add Linux, Mac, and Windows testing to our current CI
 
 HINT: You will need a variable under `matrix` that you use for `runs-on` and also for the `include`
 
-::::::::::::::::::::::::::::::::::::: solution
+:::::::::::::::  solution
 
  ## Solution
  ```yaml
@@ -420,9 +424,9 @@ HINT: You will need a variable under `matrix` that you use for `runs-on` and als
  jobs:
  
    test-python-versions:
-     name: Check Python {% raw %}${{ matrix.python-version }}{% endraw %} on {% raw %}${{ matrix.runs-on }}{% endraw %}
-     continue-on-error: {% raw %}${{ matrix.allow_failure }}{% endraw %}
-     runs-on: {% raw %}${{ matrix.runs-on }}{% endraw %}
+     name: Check Python ${{ matrix.python-version }} on ${{ matrix.runs-on }}
+     continue-on-error: ${{ matrix.allow_failure }}
+     runs-on: ${{ matrix.runs-on }}
      strategy:
        fail-fast: false
        matrix:
@@ -437,10 +441,10 @@ HINT: You will need a variable under `matrix` that you use for `runs-on` and als
      steps:
        - uses: actions/checkout@v3
  
-       - name: Setup Python {% raw %}${{ matrix.python-version }}{% endraw %}
+       - name: Setup Python ${{ matrix.python-version }}
          uses: actions/setup-python@v4
          with:
-           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
+           python-version: ${{ matrix.python-version }}
  
        - name: Install package
          run: python -m pip install -e .[test]
@@ -449,8 +453,9 @@ HINT: You will need a variable under `matrix` that you use for `runs-on` and als
          run: python -m pytest
 ```
 
-:::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Let's push these changes and see how it goes!
 
