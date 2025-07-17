@@ -30,8 +30,7 @@ Both CD methods are similar in that they are the literal continuous deployment o
 
 The differences are that after CI passes, Continous Delivery will stage a deployment but wait for a manual action to perform the actual deployment. Continous Deployment is if CI passes, there is no manual intervention. The deployment will automatically continue.
 
-![Atlassian image for CD]({{ page.root }}/fig/atlassian_continous_delivery_vs_continuous_deployment.png)
-*Figure 1. Differences between continous delivery vs. continous deployment and their relationship to continous integration. Image retrieved from: [https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)*
+![Figure 1. Differences between continous delivery vs. continous deployment and their relationship to continous integration. Image retrieved from: [HERE](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)](fig/atlassian_continous_delivery_vs_continuous_deployment.png){alt='Differences between continous delivery vs. continous deployment and their relationship to continous integration.'}
 
 # Breaking Changes
 

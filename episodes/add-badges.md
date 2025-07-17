@@ -58,7 +58,7 @@ Example:
 ```
 
 Which will give you something like:
-![badge](../fig/github-actions-badge.png)
+![badge](../fig/github-actions-badge.png){alt='Displays a created badge for your README file.'}
 
 [shields]: https://shields.io/
 [badge-docs]: https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge

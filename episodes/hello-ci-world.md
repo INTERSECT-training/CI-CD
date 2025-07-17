@@ -64,21 +64,21 @@ You just have to navigate to the GitHub webpage for the `intersect-training-cicd
 and hit Actions button.
 There, you will find details of your job (status, output,...).
 
-![GitHub Actions page]({{ page.root }}/fig/hello-ci-actions-tab.png)
+![GitHub Actions page](fig/hello-ci-actions-tab.png){alt='where to find the github actions button'}
 
 From this page, click through until you can find the output for the successful job run which should look like the following
 
-![GitHub Actions page part 2]({{ page.root }}/fig/hello-ci-actions-tab-part2.png)
+![GitHub Actions page part 2](fig/hello-ci-actions-tab-part2.png){alt='how to see the output of a job run via Github Actions'}
 
 ## Pull Request
 
 Lastly, we'll open up a pull request for this branch, since we plan to merge this back into `main` when we're happy with the first iteration of the Actions.
 
-![Pull Request]({{ page.root }}/fig/hello-ci-pull-request-create.png)
+![Pull Request](fig/hello-ci-pull-request-create.png){alt='Displays the screen for creating a pull request'}
 
 See the beauty of the passing CI checks for your pull request!
 
-![Pull Request]({{ page.root }}/fig/hello-ci-pull-request-see-ci.png)
+![Pull Request](fig/hello-ci-pull-request-see-ci.png){alt='Displays the screen after the jobs have run on a created pull request'}
 
 :::::::::::::::::::::::::::::::::::::: callout 
 ## Don't merge yet!

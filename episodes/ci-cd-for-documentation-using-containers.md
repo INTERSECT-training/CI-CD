@@ -75,7 +75,7 @@ git commit -m "Adds job to build docs in CI via docker"
 git push -u origin add-docs-cicd
 ```
 
-![GitHub Actions docs CI]({{ page.root }}/fig/docker-ci-docs.png)
+![GitHub Actions docs CI](fig/docker-ci-docs.png){alt='Displays the output of a CI Github Action'}
 
 So we are successfully building our container image in CI!
 
@@ -179,17 +179,17 @@ git commit -m "Adds CD for docs to container image registry"
 git push -u origin add-docs-cicd
 ```
 
-![GitHub Actions docs CD]({{ page.root }}/fig/github-container-package-cd.png)
+![GitHub Actions docs CD](fig/github-container-package-cd.png){alt='Displays the output of a Github Action'}
 
 Looks like it passed!
 
 And if we look at the "Packages" tab in GitHub, we should see our package!
 
-![GitHub Actions docs package]({{ page.root }}/fig/github-container-package.png)
+![GitHub Actions docs package](fig/github-container-package.png){alt='Shows how to navigate to Action packages'}
 
 Going into the package, we can see our Users are given instructions on how to get this container via `docker pull`
 
-![GitHub Actions docs package]({{ page.root }}/fig/github-container-package-page.png)
+![GitHub Actions docs package](fig/github-container-package-page.png){alt='Displays an open action package'}
 
 We can launch this container, mapping from the container port 80 (HTTP) to one on our host machine (8080), to spin up our docs server!
 ```bash

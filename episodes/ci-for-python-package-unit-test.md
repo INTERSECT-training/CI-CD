@@ -32,6 +32,7 @@ Now we will switch from setting up a general CI pipeline
 to more specifically setting up CI for our Python package needs.
 
 But first...
+
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Activity: What do we need in CI for a Python package project?
@@ -133,6 +134,7 @@ There is a Marketplace page for `actions/checkout` ([Marketplace page][actions-c
 The `@v3` in `actions/checkout@v3` signifies which version of the `actions/checkout` to use.
 
 So...
+
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Activity: What does the `setup-python` Action do?
@@ -203,14 +205,14 @@ git push
 
 Checkout the results! We see that we now have two jobs running!:
 
-![Actions]({{ page.root }}/fig/python-ci-actions.png)
+![Actions](fig/python-ci-actions.png){alt='Displays the results of Python CI Actions'}
 
 We can see the output / results from running `pytest`:
-![Actions test]({{ page.root }}/fig/python-ci-actions-test.png)
+![Actions test](fig/python-ci-actions-test.png)
 
 Similarly, we see our open Pull Request has updated dynamically with updates!
 
-![Pull Request]({{ page.root }}/fig/python-ci-pull-request.png)
+![Pull Request](fig/python-ci-pull-request.png){alt='Displays the results of Python CI Actions on the Pull Request'}
 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
