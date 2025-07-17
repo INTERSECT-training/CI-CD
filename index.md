@@ -6,7 +6,7 @@ This lesson provides an introduction into Continuous Integration (CI)
 and Continuous Delivery / Deployment (CD)
 using [GitHub Actions](https://docs.github.com/en/actions)
 
-After learning how to [test code](https://intersect-training.org/testing-lesson/)
+After learning how to [test code](https://intersect-training.org/testing/)
 and [packaging](https://intersect-training.org/packaging/) for distribution,
 one would like to automate these tasks as much as possible.
 
