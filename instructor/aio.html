@@ -585,15 +585,18 @@ artifacts. Therefore, while we don’t discourage you from trying out
 other solutions, there’s no “one size fits all” when designing your own
 CI/CD workflow.</p>
 <p><em>Why are we picking GitHub Actions?!?</em></p>
-<p>A few quick reasons that this was select is: * If you already use
-GitHub for version control, you do not have to have a 3rd party
-integration for your CI/CD solution; this usually requires storing
-secrets between GitHub and CI/CD solution, which can be problematic if
-security breaches happen (example of such an event <a href="https://github.blog/2022-04-15-security-alert-stolen-oauth-user-tokens/" class="external-link">here</a>)
-* GitHub Actions is completely free for open source and free with limits
-for private repos! * Servers / runners are provided for multiple
-operating systems. * US-RSE uses GitHub Actions on projects like the <a href="https://github.com/USRSE/usrse.github.io" class="external-link">website</a>! So you will
-learn about one of the CI solutions used by the association!</p>
+<p>A few quick reasons that this was select is:</p>
+<ul>
+<li>If you already use GitHub for version control, you do not have to
+have a 3rd party integration for your CI/CD solution; this usually
+requires storing secrets between GitHub and CI/CD solution, which can be
+problematic if security breaches happen (example of such an event <a href="https://github.blog/2022-04-15-security-alert-stolen-oauth-user-tokens/" class="external-link">here</a>)</li>
+<li>GitHub Actions is completely free for open source and free with
+limits for private repos!</li>
+<li>Servers / runners are provided for multiple operating systems.</li>
+<li>US-RSE uses GitHub Actions on projects like the <a href="https://github.com/USRSE/usrse.github.io" class="external-link">website</a>! So you will
+learn about one of the CI solutions used by the association!</li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1826,7 +1829,7 @@ tests via <code>pytest</code></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2149,7 +2152,7 @@ for Linux, Mac, and Windows.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>Linux: <code>ubuntu-latest</code>
@@ -2514,7 +2517,7 @@ UI:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Nope!</p>
 <p>The <code>dist</code> job passes but the <code>publish</code> job
@@ -2562,7 +2565,7 @@ run first.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3400,7 +3403,7 @@ docs using containers!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Not quite. We are doing CD for the “publshing” part.</p>
 <p>Yet, CD is continuous <em>delivery</em> or <em>deployment</em>. We
