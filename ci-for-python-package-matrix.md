@@ -282,7 +282,6 @@ Now to add it...
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Action: Add experimental job that is allowed to fail in the matrix
-
 Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but allow it to fail.
 
 ::::::::::::::::::::::::::::::::::::: solution
