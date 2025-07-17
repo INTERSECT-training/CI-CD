@@ -53,7 +53,7 @@ Any command you run on your computer can be equivalently run in a CI job.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Don't just limit yourself to thinking of CI/CD as primarily for testing changes, but as one part of automating an entire development cycle. You can trigger notifications to your cellphone, fetch/download new data, execute cron jobs, and so much more. However, for this lesson, you'll be going through what you have recently learned about for python testing with `pytest` in the [INTERSECT testing lesson](https://intersect-training.org/testing-lesson/) and python packaging in the [INTERSECT packaging lesson](https://intersect-training.org/packaging).
+Don't just limit yourself to thinking of CI/CD as primarily for testing changes, but as one part of automating an entire development cycle. You can trigger notifications to your cellphone, fetch/download new data, execute cron jobs, and so much more. However, for this lesson, you'll be going through what you have recently learned about for python testing with `pytest` in the [INTERSECT testing lesson](https://intersect-training.org/testing/) and python packaging in the [INTERSECT packaging lesson](https://intersect-training.org/packaging).
 
 # CI/CD Tools and Solutions
 
