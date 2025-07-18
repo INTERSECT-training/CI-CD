@@ -112,6 +112,7 @@ on:
 For the jobs, we will do a build and push of the container image on Releases.
 
 We will heavily rely on existing Actions in GitHub to accomplish this:
+
 * `docker/setup-buildx-action`: Sets up Docker for us on the runner [Marketplace][setup-buildx-action]
 * `docker/login-action`: Logs into container registries using runner credentials [Marketplace][login-action]
 * `docker/build-push-action`: Builds and pushes image to container registry. [Marketplace][build-push-action]
@@ -162,6 +163,7 @@ jobs:
 ```
 
 A few things to note:
+
 * The `permissions:packages:write` is important to allow this job to write to [GitHub Packages][github-packages], which the container registry is part of.
 * In `docker/login-action`, `github.actor` is a special variable GitHub provides for the runner to use as a "username". Similar to `__token__` usernames.
 * In `docker/login-action`, `secrets.GITHUB_TOKEN` is a secret GitHub provides for the runner to log back into other GitHub services. Reference: [https://docs.github.com/en/actions/security-guides/automatic-token-authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)
