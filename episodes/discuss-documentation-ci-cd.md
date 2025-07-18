@@ -47,12 +47,6 @@ Which is your favorite form of documentation?
 ::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-[sphinx]: https://www.sphinx-doc.org
-[numpy]: https://numpy.readthedocs.io/en/latest/
-[rmcprofile]: http://rmcprofile.org/images_rmcprofile/6/6c/Rmcprofile_v6.7.4_manual.pdf
-[arcsecond]: https://api.arcsecond.io/schema/swagger/#/
-[github]: https://docs.github.com/en/rest?apiVersion=2022-11-28
-
 ## What do we want from CI/CD for Sphinx documentation?
 
 Sphinx will allow for multiple output formats (i.e. PDF or website).
@@ -62,6 +56,7 @@ For this, Sphinx can generate HTML files that can be used to create a [static we
 
 As we discussed in the first episode, we can use CI / CD for all sorts of stuff.
 We just need to ask the questions:
+
 * _"What workflow am I trying to automate?"_
 * For CI: _"What does 'breaking changes' mean for my workflow?"_
 * For CD: _"What does deployment / delivery / release mean for my workflow?_
