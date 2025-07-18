@@ -35,6 +35,7 @@ any links that you are not going to use.
 
 [numpy]: https://numpy.readthedocs.io/en/latest/
 [rmcprofile]: http://rmcprofile.org/images_rmcprofile/6/6c/Rmcprofile_v6.7.4_manual.pdf
+[openapi]: https://swagger.io/specification/
 [nasa-openaltimetry]: https://openaltimetry.earthdatacloud.nasa.gov/data/openapi/swagger-ui/index.html#/
 [github-api]: https://docs.github.com/en/rest?apiVersion=2022-11-28
 
