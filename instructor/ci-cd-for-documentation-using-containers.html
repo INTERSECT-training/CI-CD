@@ -560,8 +560,8 @@ editor and add the following:</p>
 </div>
 <p>A few things to note:</p>
 <ul><li>The <code>permissions:packages:write</code> is important to allow
-this job to write to [GitHub Packages][github-packages], which the
-container registry is part of.</li>
+this job to write to <a href="https://docs.github.com/en/packages" class="external-link">GitHub Packages</a>, which
+the container registry is part of.</li>
 <li>In <code>docker/login-action</code>, <code>github.actor</code> is a
 special variable GitHub provides for the runner to use as a “username”.
 Similar to <code>__token__</code> usernames.</li>
@@ -633,7 +633,7 @@ docs using containers!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Not quite. We are doing CD for the “publshing” part.</p>
 <p>Yet, CD is continuous <em>delivery</em> or <em>deployment</em>. We
