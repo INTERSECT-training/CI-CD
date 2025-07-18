@@ -25,7 +25,7 @@ Next, we will discuss another artifact from software we can setup CI / CD for: c
 
 In our example repository, we have our documentation source code in `docs/`.
 
-Using [sphinx](https://www.sphinx-doc.org), you can "build" the documentation.
+Using [sphinx][sphinx], you can "build" the documentation.
 Similar to our Python package, the output of the documentation build is an artifact.
 Yet, it is not an installable package that we output.
 
@@ -42,7 +42,7 @@ Which is your favorite form of documentation?
 
 * Websites, like on [ReadTheDocs][rtd] (example: [NumPy docs][numpy])
 * PDF files (example: [RMCProfile v6.7.4 docs][rmcprofile])
-* API documentation like [Swagger / OpenAPI][openapi] for Software-as-a-Service (example: [Arcsecond Swagger][arcsecond] or [GitHub REST API docs][github])
+* API documentation like [Swagger / OpenAPI][openapi] for Software-as-a-Service (example: [NASA OpenAltimetry][nasa-openaltimetry] or [GitHub REST API docs][github-api])
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
