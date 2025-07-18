@@ -205,7 +205,7 @@ An example would be to test up to the latest alpha / beta release of a Python ve
 
 You do not want a failure in such cutting-edge, unstable tests stopping your CI.
 
-At time of writing, the latest supported beta version of Python for the `actions/python-versions` is 3.12.0-beta.4 based on their [GitHub Releases](https://github.com/actions/python-versions/releases).
+At time of writing, the latest supported beta version of Python for the `actions/python-versions` is 3.14.0-beta.4 based on their [GitHub Releases](https://github.com/actions/python-versions/releases).
 
 Let's add this to our python version testing.
 
@@ -243,11 +243,11 @@ For this, we use `include` to add a single extra job to the matrix with "metadat
 strategy:
   matrix:
     include:
-      - python-version: "3.12.0-beta.4"
+      - python-version: "3.14.0-beta.4"
         allow_failure: true
 ```
 
-This will add the string `"3.12.0-beta.4"` to the `python-version`
+This will add the string `"3.14.0-beta.4"` to the `python-version`
 list in matrix with the arbitrary variable `allow_failure` set to `true`
 as "metadata".
 We also must add the `allow_failure` "metadata" to the other members of the matrix (see below).
@@ -259,7 +259,7 @@ More detail: [https://docs.github.com/en/actions/using-workflows/workflow-syntax
 
 ## Putting it together for Python experimental job...
 
-So if we **only** want to allow the job with version set to `3.12.0-beta.4` to fail without failing the workflow run, we need something like:
+So if we **only** want to allow the job with version set to `3.14.0-beta.4` to fail without failing the workflow run, we need something like:
 
 Then the following would work for a job:
 ```yaml
@@ -273,7 +273,7 @@ jobs:
          python-version: ["3.10", "3.11"]
          allow_failure: [false]
          include:
-           - python-version: "3.12.0-beta.4"
+           - python-version: "3.14.0-beta.4"
              allow_failure: true
 ```
 
@@ -284,7 +284,7 @@ Now to add it...
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Action: Add experimental job that is allowed to fail in the matrix
-Add "3.12.0-beta.4" to our current Python package CI YAML via the matrix but allow it to fail.
+Add "3.14.0-beta.4" to our current Python package CI YAML via the matrix but allow it to fail.
 
 :::::::::::::::  solution
 
@@ -305,7 +305,7 @@ jobs:
         python-version: ["3.10", "3.11"]
         allow_failure: [false]
         include:
-          - python-version: "3.12.0-beta.4"
+          - python-version: "3.14.0-beta.4"
             allow_failure: true
 
     steps:
@@ -331,10 +331,10 @@ Let's commit this and see how it looks!
 
 ```bash
 git add .github/workflows/main.yml
-git commit -m "Adds experimental Python 3.12.0-beta.4 test to CI"
+git commit -m "Adds experimental Python 3.14.0-beta.4 test to CI"
 git push -u origin add-ci
 ```
-We see that the overall workflow passed even though the Python 3.12.0-beta.4 job failed!
+We see that the overall workflow passed even though the Python 3.14.0-beta.4 job failed!
 
 Also, note that we see that GitHub Actions reports an exit code that is non-zero!
 Like previously discussed, exit codes are what CI tools / solution are built around.
@@ -434,7 +434,7 @@ jobs:
         python-version: ["3.10", "3.11"]
         allow_failure: [false]
         include:
-          - python-version: "3.12.0-beta.4"
+          - python-version: "3.14.0-beta.4"
             runs-on: ubuntu-latest
             allow_failure: true
 
