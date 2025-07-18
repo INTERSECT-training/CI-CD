@@ -1494,7 +1494,7 @@ a Python Package?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Just some suggestions (not comprehensive):</p>
 <ul>
@@ -1621,7 +1621,7 @@ all the <code>with</code> options?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>This action helps install a version of Python along with other
@@ -1706,7 +1706,7 @@ updates!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Parallel. We will discuss this more when we get to the CD
 section.</p>
@@ -2570,7 +2570,7 @@ UI:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Nope!</p>
 <p>The <code>dist</code> job passes but the <code>publish</code> job
@@ -2618,7 +2618,7 @@ run first.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2946,7 +2946,7 @@ what form is it in? Which is your favorite form of documentation?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Examples </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Websites, like on <a href="https://docs.readthedocs.com/platform/stable/" class="external-link">ReadTheDocs</a>
@@ -3003,7 +3003,7 @@ webpage, what are your answers to the questions above?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>For CI: we want to automate building the documetation HTML
@@ -3238,7 +3238,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-ci-cd-for-documentation-using-containers"><p>Content from <a href="ci-cd-for-documentation-using-containers.html">(Bonus) Implementing CI/CD for documentation using containers</a></p>
 <hr>
-<p>Last updated on 2025-07-17 |
+<p>Last updated on 2025-07-18 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-cd-for-documentation-using-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3366,12 +3366,21 @@ trigger:</p>
 <p>For the jobs, we will do a build and push of the container image on
 Releases.</p>
 <p>We will heavily rely on existing Actions in GitHub to accomplish
-this: * <code>docker/setup-buildx-action</code>: Sets up Docker for us
-on the runner <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
-* <code>docker/login-action</code>: Logs into container registries using
-runner credentials <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
-* <code>docker/build-push-action</code>: Builds and pushes image to
-container registry. <a href="https://github.com/marketplace/actions/docker-build-push-action" class="external-link">Marketplace</a></p>
+this:</p>
+<ul>
+<li>
+<code>docker/setup-buildx-action</code>: Sets up Docker for us on
+the runner <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
+</li>
+<li>
+<code>docker/login-action</code>: Logs into container registries
+using runner credentials <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
+</li>
+<li>
+<code>docker/build-push-action</code>: Builds and pushes image to
+container registry. <a href="https://github.com/marketplace/actions/docker-build-push-action" class="external-link">Marketplace</a>
+</li>
+</ul>
 <p>Open <code>.github/workflows/docs-cd.yml</code> with your favorite
 editor and add the following:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -3415,29 +3424,39 @@ editor and add the following:</p>
 <span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a><span class="at">          </span><span class="fu">platforms</span><span class="kw">:</span><span class="at"> linux/amd64,linux/arm64</span></span>
 <span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ghcr.io/${{ github.repository }}:${{ github.ref_name }}</span></span></code></pre>
 </div>
-<p>A few things to note: * The <code>permissions:packages:write</code>
-is important to allow this job to write to [GitHub
-Packages][github-packages], which the container registry is part of. *
-In <code>docker/login-action</code>, <code>github.actor</code> is a
+<p>A few things to note:</p>
+<ul>
+<li>The <code>permissions:packages:write</code> is important to allow
+this job to write to [GitHub Packages][github-packages], which the
+container registry is part of.</li>
+<li>In <code>docker/login-action</code>, <code>github.actor</code> is a
 special variable GitHub provides for the runner to use as a “username”.
-Similar to <code>__token__</code> usernames. * In
-<code>docker/login-action</code>, <code>secrets.GITHUB_TOKEN</code> is a
-secret GitHub provides for the runner to log back into other GitHub
-services. Reference: <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication" class="external-link">https://docs.github.com/en/actions/security-guides/automatic-token-authentication</a>
-* In <code>docker/build-push-action</code>, the <code>push: true</code>
-is what tells this action we want to push the image to the container
-image registry * In <code>docker/build-push-action</code>, we are
-building for multiple hardware platforms via
-<code>platforms: linux/amd64,linux/arm64</code>. * In
-<code>docker/build-push-action</code>, the <code>tags</code> is
-essentially the tag name others will use to “pull” the image from. * We
-are using some other <code>github.*</code> variables in the
+Similar to <code>__token__</code> usernames.</li>
+<li>In <code>docker/login-action</code>,
+<code>secrets.GITHUB_TOKEN</code> is a secret GitHub provides for the
+runner to log back into other GitHub services. Reference: <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication" class="external-link">https://docs.github.com/en/actions/security-guides/automatic-token-authentication</a>
+</li>
+<li>In <code>docker/build-push-action</code>, the
+<code>push: true</code> is what tells this action we want to push the
+image to the container image registry</li>
+<li>In <code>docker/build-push-action</code>, we are building for
+multiple hardware platforms via
+<code>platforms: linux/amd64,linux/arm64</code>.</li>
+<li>In <code>docker/build-push-action</code>, the <code>tags</code> is
+essentially the tag name others will use to “pull” the image from.</li>
+<li>We are using some other <code>github.*</code> variables in the
 <code>tags</code> to construct the image name in the container registry:
-- <code>github.repository</code>: Repository name
-(i.e. <code>marshallmcdonnell/intersect-training-cicd</code>) -
-<code>github.ref_name</code>: Short name of branch or tag, using it as a
-sort of “version number” (i.e. <code>add-docs-cd</code> or
-<code>v0.1.0</code>)</p>
+<ul>
+<li>
+<code>github.repository</code>: Repository name
+(i.e. <code>marshallmcdonnell/intersect-training-cicd</code>)</li>
+<li>
+<code>github.ref_name</code>: Short name of branch or tag, using it
+as a sort of “version number” (i.e. <code>add-docs-cd</code> or
+<code>v0.1.0</code>)</li>
+</ul>
+</li>
+</ul>
 <p>Let’s push this to the repository and see what happens!</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3485,7 +3504,7 @@ docs using containers!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Not quite. We are doing CD for the “publshing” part.</p>
 <p>Yet, CD is continuous <em>delivery</em> or <em>deployment</em>. We

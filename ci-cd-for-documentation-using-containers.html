@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>(Bonus) Implementing CI/CD for documentation using containers</h1>
-        <p>Last updated on 2025-07-17 |
+        <p>Last updated on 2025-07-18 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-cd-for-documentation-using-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -500,13 +500,20 @@ trigger:</p>
 <p>For the jobs, we will do a build and push of the container image on
 Releases.</p>
 <p>We will heavily rely on existing Actions in GitHub to accomplish
-this: * <code>docker/setup-buildx-action</code>: Sets up Docker for us
-on the runner <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
-* <code>docker/login-action</code>: Logs into container registries using
-runner credentials <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
-* <code>docker/build-push-action</code>: Builds and pushes image to
-container registry. <a href="https://github.com/marketplace/actions/docker-build-push-action" class="external-link">Marketplace</a></p>
-<p>Open <code>.github/workflows/docs-cd.yml</code> with your favorite
+this:</p>
+<ul><li>
+<code>docker/setup-buildx-action</code>: Sets up Docker for us on
+the runner <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
+</li>
+<li>
+<code>docker/login-action</code>: Logs into container registries
+using runner credentials <a href="https://github.com/marketplace/actions/docker-setup-buildx" class="external-link">Marketplace</a>
+</li>
+<li>
+<code>docker/build-push-action</code>: Builds and pushes image to
+container registry. <a href="https://github.com/marketplace/actions/docker-build-push-action" class="external-link">Marketplace</a>
+</li>
+</ul><p>Open <code>.github/workflows/docs-cd.yml</code> with your favorite
 editor and add the following:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -549,30 +556,36 @@ editor and add the following:</p>
 <span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a><span class="at">          </span><span class="fu">platforms</span><span class="kw">:</span><span class="at"> linux/amd64,linux/arm64</span></span>
 <span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ghcr.io/${{ github.repository }}:${{ github.ref_name }}</span></span></code></pre>
 </div>
-<p>A few things to note: * The <code>permissions:packages:write</code>
-is important to allow this job to write to [GitHub
-Packages][github-packages], which the container registry is part of. *
-In <code>docker/login-action</code>, <code>github.actor</code> is a
+<p>A few things to note:</p>
+<ul><li>The <code>permissions:packages:write</code> is important to allow
+this job to write to [GitHub Packages][github-packages], which the
+container registry is part of.</li>
+<li>In <code>docker/login-action</code>, <code>github.actor</code> is a
 special variable GitHub provides for the runner to use as a “username”.
-Similar to <code>__token__</code> usernames. * In
-<code>docker/login-action</code>, <code>secrets.GITHUB_TOKEN</code> is a
-secret GitHub provides for the runner to log back into other GitHub
-services. Reference: <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication" class="external-link">https://docs.github.com/en/actions/security-guides/automatic-token-authentication</a>
-* In <code>docker/build-push-action</code>, the <code>push: true</code>
-is what tells this action we want to push the image to the container
-image registry * In <code>docker/build-push-action</code>, we are
-building for multiple hardware platforms via
-<code>platforms: linux/amd64,linux/arm64</code>. * In
-<code>docker/build-push-action</code>, the <code>tags</code> is
-essentially the tag name others will use to “pull” the image from. * We
-are using some other <code>github.*</code> variables in the
+Similar to <code>__token__</code> usernames.</li>
+<li>In <code>docker/login-action</code>,
+<code>secrets.GITHUB_TOKEN</code> is a secret GitHub provides for the
+runner to log back into other GitHub services. Reference: <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication" class="external-link">https://docs.github.com/en/actions/security-guides/automatic-token-authentication</a>
+</li>
+<li>In <code>docker/build-push-action</code>, the
+<code>push: true</code> is what tells this action we want to push the
+image to the container image registry</li>
+<li>In <code>docker/build-push-action</code>, we are building for
+multiple hardware platforms via
+<code>platforms: linux/amd64,linux/arm64</code>.</li>
+<li>In <code>docker/build-push-action</code>, the <code>tags</code> is
+essentially the tag name others will use to “pull” the image from.</li>
+<li>We are using some other <code>github.*</code> variables in the
 <code>tags</code> to construct the image name in the container registry:
-- <code>github.repository</code>: Repository name
-(i.e. <code>marshallmcdonnell/intersect-training-cicd</code>) -
-<code>github.ref_name</code>: Short name of branch or tag, using it as a
-sort of “version number” (i.e. <code>add-docs-cd</code> or
-<code>v0.1.0</code>)</p>
-<p>Let’s push this to the repository and see what happens!</p>
+<ul><li>
+<code>github.repository</code>: Repository name
+(i.e. <code>marshallmcdonnell/intersect-training-cicd</code>)</li>
+<li>
+<code>github.ref_name</code>: Short name of branch or tag, using it
+as a sort of “version number” (i.e. <code>add-docs-cd</code> or
+<code>v0.1.0</code>)</li>
+</ul></li>
+</ul><p>Let’s push this to the repository and see what happens!</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -618,7 +631,7 @@ docs using containers!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Not quite. We are doing CD for the “publshing” part.</p>
 <p>Yet, CD is continuous <em>delivery</em> or <em>deployment</em>. We
@@ -722,7 +735,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/CI-CD/ci-cd-for-documentation-using-containers.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/ci-cd-for-documentation-using-containers.html",
   "dateCreated": "2025-07-18",
-  "dateModified": "2025-07-17",
+  "dateModified": "2025-07-18",
   "datePublished": "2025-07-18"
 }
 
