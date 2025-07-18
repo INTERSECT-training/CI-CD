@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>(Bonus) Quick primer on Containers</h1>
-        <p>Last updated on 2025-07-17 |
+        <p>Last updated on 2025-07-18 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/quick-primer-on-containers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -417,10 +417,11 @@ sounds like a packaged library but these are different. Containers serve
 more like executables and run very “isolated” from the system they are
 run on. They bundle together such things like specific versions of
 programming language runtimes and libraries required to run.</p>
-<p>Some of the typical benefits advertised for containers is: * very
-portable * lighweight (relative to things like virtual machines) *
-application isolation on a system</p>
-<p>They are very popular in any web-based software like websites,
+<p>Some of the typical benefits advertised for containers is:</p>
+<ul><li>very portable</li>
+<li>lighweight (relative to things like virtual machines)</li>
+<li>application isolation on a system</li>
+</ul><p>They are very popular in any web-based software like websites,
 databases or software services (i.e. REST APIs)</p>
 <p>And they can be used for documentation websites!</p>
 <div class="section level2">
@@ -438,9 +439,9 @@ the environmental variables that are set for each or different data put
 inside each container.</p>
 <p>An analogy is there is one version of Windows 11 operating system. It
 is installed on many Windows computers around the world.</p>
-<p>Yet, each individual Windows computer far from identical since people
-modify their personal computers: different backgrouns, different files
-on them, different CPU resources for each computer.</p>
+<p>Yet, each individual Windows computer is far from identical since
+people modify their personal computers: different backgrounds, different
+files on them, different CPU resources for each computer.</p>
 <p>So the artifact we want to produce is a <em>container image</em>.</p>
 <p>Then, the User of the documentation container image can modify it at
 runtime, such as web server configurations.</p>
@@ -464,25 +465,29 @@ for the interested reader.</p>
 <div id="what-we-will-need" class="callout-inner">
 <h3 class="callout-title">What we will need</h3>
 <div class="callout-content">
-<p>The very high-level Docker understanding we need is: * A container
-image is created in Docker using a <code>Dockerfile</code>: a file that
-defines the container image build * The command
+<p>The very high-level Docker understanding we need is:</p>
+<ul><li>A container image is created in Docker using a
+<code>Dockerfile</code>: a file that defines the container image
+build</li>
+<li>The command
 <code>docker build --file Dockerfile --tag &lt;name of image&gt; .</code>
 (or shorthand, <code>docker build -t &lt;name of image&gt; .</code>)
-will build the container image * The command
-<code>docker run &lt;name of image&gt;</code> will spin up a container
-from the container image and run it</p>
-</div>
+will build the container image</li>
+<li>The command <code>docker run &lt;name of image&gt;</code> will spin
+up a container from the container image and run it</li>
+</ul></div>
 </div>
 </div>
 <p>We will simply be using Docker as a sort of “blackbox” tool to help
 perform our CI/CD operations in GitHub Actions for documentation
-artifact: * Build the documentation in a container image * Publish the
-container image ready to run our documentation server * (<em>not covered
-here</em>) Deploy this container on a server, cloud-service, or
-container orchestration platform to serve our documentation to the
-Users.</p>
-</div>
+artifact:</p>
+<ul><li>Build the documentation in a container image</li>
+<li>Publish the container image ready to run our documentation
+server</li>
+<li>(<em>not covered here</em>) Deploy this container on a server,
+cloud-service, or container orchestration platform to serve our
+documentation to the Users.</li>
+</ul></div>
 <div class="section level1">
 <h1 id="dockerhub">DockerHub<a class="anchor" aria-label="anchor" href="#dockerhub"></a></h1>
 <p>We discussed containers vs. container images. And we stated that
@@ -503,14 +508,17 @@ to PyPi but for containers instead of Python packages.</p>
 <div id="what-we-will-need-1" class="callout-inner">
 <h3 class="callout-title">What we will need</h3>
 <div class="callout-content">
-<p>The very high-level Docker understanding we need is: * After building
-an image, we can put it in a container image registry via
-<code>docker push &lt;name of image&gt;</code> * We can retrieve an
-image from a container image registry via
-<code>docker pull &lt;name of image&gt;</code> * We can rename a
-contianer image via
-<code>docker tag &lt;original tag&gt; &lt;new tag&gt;</code></p>
-</div>
+<p>The very high-level Docker understanding we need is:</p>
+<ul><li>After building an image, we can put it in a container image registry
+via <code>docker push &lt;name of image&gt;</code>
+</li>
+<li>We can retrieve an image from a container image registry via
+<code>docker pull &lt;name of image&gt;</code>
+</li>
+<li>We can rename a contianer image via
+<code>docker tag &lt;original tag&gt; &lt;new tag&gt;</code>
+</li>
+</ul></div>
 </div>
 </div>
 </div>
@@ -521,8 +529,9 @@ contianer image via
 <code>docker pull</code> and <code>docker push</code> commands we will
 be using:</p>
 <figure><img src="../fig/docker-architecture.png" alt="Diagram of Docker Architecture" class="figure mx-auto d-block"><div class="figcaption">Docker arch</div>
-</figure><p><a href="https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html" class="external-link">image
-source</a></p>
+</figure><div class="float">
+<embed src="https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html"></embed><div class="figcaption">image source</div>
+</div>
 <div class="section level2">
 <h2 id="wrap-up">Wrap up<a class="anchor" aria-label="anchor" href="#wrap-up"></a></h2>
 <p>Now we have an idea of what we what to do for documentation CI/CD and
@@ -608,7 +617,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/CI-CD/instructor/quick-primer-on-containers.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/instructor/quick-primer-on-containers.html",
   "dateCreated": "2025-07-18",
-  "dateModified": "2025-07-17",
+  "dateModified": "2025-07-18",
   "datePublished": "2025-07-18"
 }
 
