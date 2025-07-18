@@ -42,4 +42,7 @@ any links that you are not going to use.
 
 [static-page]: https://en.wikipedia.org/wiki/Static_web_page
 [containers-google]: https://cloud.google.com/learn/what-are-containers
+[setup-buildx-action]: https://github.com/marketplace/actions/docker-setup-buildx
+[login-action]: https://github.com/marketplace/actions/docker-setup-buildx
+[build-push-action]: https://github.com/marketplace/actions/docker-build-push-action
 
