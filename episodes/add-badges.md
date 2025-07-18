@@ -44,6 +44,7 @@ Yet, for CI/CD, GitHub Actions already provides this badge for you, you just nee
 
 The [GitHub Actions badges][badge-docs] has the following template to create badges in your README markdown files! 
 Just replace:
+
 * OWNER
 * REPOSITORY
 * YAML
