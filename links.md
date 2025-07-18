@@ -45,4 +45,5 @@ any links that you are not going to use.
 [setup-buildx-action]: https://github.com/marketplace/actions/docker-setup-buildx
 [login-action]: https://github.com/marketplace/actions/docker-login
 [build-push-action]: https://github.com/marketplace/actions/docker-build-push-action
+[github-packages]: https://docs.github.com/en/packages
 
