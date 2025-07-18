@@ -40,3 +40,6 @@ any links that you are not going to use.
 [nasa-openaltimetry]: https://openaltimetry.earthdatacloud.nasa.gov/data/openapi/swagger-ui/index.html#/
 [github-api]: https://docs.github.com/en/rest?apiVersion=2022-11-28
 
+[static-page]: https://en.wikipedia.org/wiki/Static_web_page
+[containers-google]: https://cloud.google.com/learn/what-are-containers
+
