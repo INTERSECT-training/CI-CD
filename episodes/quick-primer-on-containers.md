@@ -27,6 +27,7 @@ Containers serve more like executables and run very "isolated" from the system t
 They bundle together such things like specific versions of programming language runtimes and libraries required to run.
 
 Some of the typical benefits advertised for containers is:
+
 * very portable
 * lighweight (relative to things like virtual machines)
 * application isolation on a system
@@ -34,9 +35,6 @@ Some of the typical benefits advertised for containers is:
 They are very popular in any web-based software like websites, databases or software services (i.e. REST APIs)
 
 And they can be used for documentation websites!
-
-[static-page]: https://en.wikipedia.org/wiki/Static_web_page
-[containers-google]: https://cloud.google.com/learn/what-are-containers
 
 ## Difference between "Container" and "Container Image"
 
@@ -51,7 +49,7 @@ Then _containers_ are created from _container images_, with runtime modification
 An analogy is there is one version of Windows 11 operating system.
 It is installed on many Windows computers around the world.
 
-Yet, each individual Windows computer far from identical since people modify their personal computers: different backgrouns, different files on them, different CPU resources for each computer.
+Yet, each individual Windows computer is far from identical since people modify their personal computers: different backgrounds, different files on them, different CPU resources for each computer.
 
 So the artifact we want to produce is a _container image_.
 
@@ -72,6 +70,7 @@ There are [other Carpentries][carpentry-docker] which do go over using Docker fo
 
 ## What we will need
 The very high-level Docker understanding we need is:
+
 * A container image is created in Docker using a `Dockerfile`: a file that defines the container image build
 * The command `docker build --file Dockerfile --tag <name of image> .` (or shorthand, `docker build -t <name of image> .`) will build the container image
 * The command `docker run <name of image>` will spin up a container from the container image and run it
@@ -79,6 +78,7 @@ The very high-level Docker understanding we need is:
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 We will simply be using Docker as a sort of "blackbox" tool to help perform our CI/CD operations in GitHub Actions for documentation artifact:
+
 * Build the documentation in a container image
 * Publish the container image ready to run our documentation server
 * (_not covered here_) Deploy this container on a server, cloud-service, or container orchestration platform to serve our documentation to the Users.
@@ -104,6 +104,7 @@ But for now, you can consider it equivalent to PyPi but for containers instead o
 
 ## What we will need
 The very high-level Docker understanding we need is:
+
 * After building an image, we can put it in a container image registry via `docker push <name of image>`
 * We can retrieve an image from a container image registry via `docker pull <name of image>`
 * We can rename a contianer image via `docker tag <original tag> <new tag>`
@@ -116,7 +117,7 @@ This graphic helps illustrate what we are doing with our `docker build`, `docker
 
 ![Docker arch](fig/docker-architecture.png){alt='Diagram of Docker Architecture'}
 
-[image source](https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html)
+![image source](https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html)
 
 
 ## Wrap up
