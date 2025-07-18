@@ -33,6 +33,7 @@ any links that you are not going to use.
 [runs-on]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
 [runner-types]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners
 
+[rtd]: https://docs.readthedocs.com/platform/stable/
 [numpy]: https://numpy.readthedocs.io/en/latest/
 [rmcprofile]: http://rmcprofile.org/images_rmcprofile/6/6c/Rmcprofile_v6.7.4_manual.pdf
 [openapi]: https://swagger.io/specification/
