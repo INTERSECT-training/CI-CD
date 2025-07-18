@@ -117,10 +117,6 @@ We will heavily rely on existing Actions in GitHub to accomplish this:
 * `docker/login-action`: Logs into container registries using runner credentials [Marketplace][login-action]
 * `docker/build-push-action`: Builds and pushes image to container registry. [Marketplace][build-push-action]
 
-[setup-buildx-action]: https://github.com/marketplace/actions/docker-setup-buildx
-[login-action]: https://github.com/marketplace/actions/docker-setup-buildx
-[build-push-action]: https://github.com/marketplace/actions/docker-build-push-action
-
 Open `.github/workflows/docs-cd.yml` with your favorite editor and add the following:
 ```yaml
 name: Documentation CD
