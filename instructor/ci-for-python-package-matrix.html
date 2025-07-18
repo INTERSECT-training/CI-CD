@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Matrix</h1>
-        <p>Last updated on 2025-07-17 |
+        <p>Last updated on 2025-07-18 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/ci-for-python-package-matrix.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -614,7 +614,7 @@ a Python version.</p>
 <p>You do not want a failure in such cutting-edge, unstable tests
 stopping your CI.</p>
 <p>At time of writing, the latest supported beta version of Python for
-the <code>actions/python-versions</code> is 3.12.0-beta.4 based on their
+the <code>actions/python-versions</code> is 3.14.0-beta.4 based on their
 <a href="https://github.com/actions/python-versions/releases" class="external-link">GitHub
 Releases</a>.</p>
 <p>Let’s add this to our python version testing.</p>
@@ -654,10 +654,10 @@ the matrix with “metadata”.</p>
 <pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">strategy</span><span class="kw">:</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="at">  </span><span class="fu">matrix</span><span class="kw">:</span></span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="at">    </span><span class="fu">include</span><span class="kw">:</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12.0-beta.4"</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.14.0-beta.4"</span></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="at">        </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre>
 </div>
-<p>This will add the string <code>"3.12.0-beta.4"</code> to the
+<p>This will add the string <code>"3.14.0-beta.4"</code> to the
 <code>python-version</code> list in matrix with the arbitrary variable
 <code>allow_failure</code> set to <code>true</code> as “metadata”. We
 also must add the <code>allow_failure</code> “metadata” to the other
@@ -671,7 +671,7 @@ members of the matrix (see below).</p>
 <h3 class="callout-title">Putting it together for Python experimental job…</h3>
 <div class="callout-content">
 <p>So if we <strong>only</strong> want to allow the job with version set
-to <code>3.12.0-beta.4</code> to fail without failing the workflow run,
+to <code>3.14.0-beta.4</code> to fail without failing the workflow run,
 we need something like:</p>
 <p>Then the following would work for a job:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -687,7 +687,7 @@ we need something like:</p>
 <span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="at">         </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"3.10"</span><span class="kw">,</span><span class="at"> </span><span class="st">"3.11"</span><span class="kw">]</span></span>
 <span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="at">         </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="ch">false</span><span class="kw">]</span></span>
 <span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="at">         </span><span class="fu">include</span><span class="kw">:</span></span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="at">           </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12.0-beta.4"</span></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="at">           </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.14.0-beta.4"</span></span>
 <span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="at">             </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre>
 </div>
 </div>
@@ -701,7 +701,7 @@ we need something like:</p>
 <div id="action-add-experimental-job-that-is-allowed-to-fail-in-the-matrix" class="callout-inner">
 <h3 class="callout-title">Action: Add experimental job that is allowed to fail in the matrix</h3>
 <div class="callout-content">
-<p>Add “3.12.0-beta.4” to our current Python package CI YAML via the
+<p>Add “3.14.0-beta.4” to our current Python package CI YAML via the
 matrix but allow it to fail.</p>
 </div>
 </div>
@@ -731,7 +731,7 @@ matrix but allow it to fail.</p>
 <span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"3.10"</span><span class="kw">,</span><span class="at"> </span><span class="st">"3.11"</span><span class="kw">]</span></span>
 <span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="at">        </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="ch">false</span><span class="kw">]</span></span>
 <span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="at">        </span><span class="fu">include</span><span class="kw">:</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12.0-beta.4"</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.14.0-beta.4"</span></span>
 <span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="at">            </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a></span>
 <span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
@@ -757,11 +757,11 @@ matrix but allow it to fail.</p>
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/main.yml</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds experimental Python 3.12.0-beta.4 test to CI"</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds experimental Python 3.14.0-beta.4 test to CI"</span></span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-ci</span></code></pre>
 </div>
 <p>We see that the overall workflow passed even though the Python
-3.12.0-beta.4 job failed!</p>
+3.14.0-beta.4 job failed!</p>
 <p>Also, note that we see that GitHub Actions reports an exit code that
 is non-zero! Like previously discussed, exit codes are what CI tools /
 solution are built around.</p>
@@ -894,7 +894,7 @@ for <code>runs-on</code> and also for the <code>include</code></p>
 <span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"3.10"</span><span class="kw">,</span><span class="at"> </span><span class="st">"3.11"</span><span class="kw">]</span></span>
 <span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a><span class="at">        </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="ch">false</span><span class="kw">]</span></span>
 <span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a><span class="at">        </span><span class="fu">include</span><span class="kw">:</span></span>
-<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.12.0-beta.4"</span></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.14.0-beta.4"</span></span>
 <span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="at">            </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
 <span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a><span class="at">            </span><span class="fu">allow_failure</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a></span>
@@ -1032,7 +1032,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/CI-CD/instructor/ci-for-python-package-matrix.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/instructor/ci-for-python-package-matrix.html",
   "dateCreated": "2025-07-18",
-  "dateModified": "2025-07-17",
+  "dateModified": "2025-07-18",
   "datePublished": "2025-07-18"
 }
 
