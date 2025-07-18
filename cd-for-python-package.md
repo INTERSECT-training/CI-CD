@@ -302,6 +302,7 @@ If you do not feel comfortable with these tasks, feel free to just read along
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 To setup using TestPyPi, we need to:
+
 * [Register](https://test.pypi.org/account/register/) for an account on TestPyPi
 
 ![Register Page](fig/testpypi-register.png){alt='Displays the registration page for PyPi'}
