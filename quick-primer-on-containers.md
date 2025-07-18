@@ -117,7 +117,7 @@ This graphic helps illustrate what we are doing with our `docker build`, `docker
 
 ![Docker arch](fig/docker-architecture.png){alt='Diagram of Docker Architecture'}
 
-![image source](https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html)
+[image source](https://jerrelysan.blogspot.com/2021/06/enter-in-docker-container-what-is.html)
 
 
 ## Wrap up
@@ -126,9 +126,6 @@ Now we have an idea of what we what to do for documentation CI/CD
 and a tool to use for performing these operations (Docker).
 
 Next, we will take these together and attempt to publish a container image as a documentation artifact.
-
-[docker]: https://docs.docker.com/get-docker/
-[carpentry-docker]: https://hsf-training.github.io/hsf-training-docker/
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
