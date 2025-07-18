@@ -60,7 +60,7 @@ jobs:
   build-docs-using-docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build docs via Docker
         run: docker build -t my-docs .
@@ -134,7 +134,7 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       -
         name: Set up Docker Buildx

@@ -104,7 +104,7 @@ jobs:
     name: Check Python 3.10 on Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
