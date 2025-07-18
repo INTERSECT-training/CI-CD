@@ -120,7 +120,7 @@ This gives us our first step in the CD process, building the artifacts for a sof
 
 Now, we want to take the artifact in the `dist` job and use it in our next phase.
 
-To do so, we need to use the complimentary Action to `actions/upload-artifact, which is `action/download-artifact`.
+To do so, we need to use the complimentary Action to `actions/upload-artifact`, which is `action/download-artifact`.
 
 From the [Marketplace page](https://github.com/marketplace/actions/download-a-build-artifact), we can see this simply downloads the artifact that is stored using the `path`.
 
