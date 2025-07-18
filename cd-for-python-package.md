@@ -94,7 +94,7 @@ jobs:
   dist:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Build SDist & wheel
       run: pipx run build
@@ -139,7 +139,7 @@ jobs:
   dist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build SDist & wheel
         run: pipx run build
