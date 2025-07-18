@@ -1835,7 +1835,7 @@ as well.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2077,7 +2077,7 @@ matrix but allow it to fail.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Below is a solution for <code>.github/workflow/main.yml</code>:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -2182,7 +2182,7 @@ for Linux, Mac, and Windows.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ul>
 <li>Linux: <code>ubuntu-latest</code>
@@ -2244,7 +2244,7 @@ for <code>runs-on</code> and also for the <code>include</code></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2348,7 +2348,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-cd-for-python-package"><p>Content from <a href="cd-for-python-package.html">CD for Python Package</a></p>
 <hr>
-<p>Last updated on 2025-07-17 |
+<p>Last updated on 2025-07-18 |
 
         <a href="https://github.com/INTERSECT-training/CI-CD/edit/main/episodes/cd-for-python-package.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2497,7 +2497,8 @@ artifacts for a software release!</p>
 <p>Now, we want to take the artifact in the <code>dist</code> job and
 use it in our next phase.</p>
 <p>To do so, we need to use the complimentary Action to
-<code>actions/upload-artifact, which is</code>action/download-artifact`.</p>
+<code>actions/upload-artifact</code>, which is
+<code>action/download-artifact</code>.</p>
 <p>From the <a href="https://github.com/marketplace/actions/download-a-build-artifact" class="external-link">Marketplace
 page</a>, we can see this simply downloads the artifact that is stored
 using the <code>path</code>.</p>
@@ -2935,7 +2936,7 @@ what form is it in? Which is your favorite form of documentation?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Examples </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Websites, like on [ReadTheDocs][rtd] (example: <a href="https://numpy.readthedocs.io/en/latest/" class="external-link">NumPy docs</a>)</li>
@@ -2984,7 +2985,7 @@ webpage, what are your answers to the questions above?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>For CI: we want to automate building the documetation HTML
@@ -3544,9 +3545,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://INTERSECT-training.github.io/CI-CD/aio.html",
   "identifier": "https://INTERSECT-training.github.io/CI-CD/aio.html",
-  "dateCreated": "2025-07-17",
-  "dateModified": "2025-07-17",
-  "datePublished": "2025-07-17"
+  "dateCreated": "2025-07-18",
+  "dateModified": "2025-07-18",
+  "datePublished": "2025-07-18"
 }
 
   </script><script>
