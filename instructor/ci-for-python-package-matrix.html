@@ -454,6 +454,7 @@ as well.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="action-add-python-3.11-test" class="callout-inner">
 <h3 class="callout-title">Action: Add Python 3.11 test</h3>
 <div class="callout-content">
@@ -473,7 +474,7 @@ as well.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -548,8 +549,10 @@ this principle to CI!</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="action-building-a-matrix-across-different-versions" class="callout-inner">
-<h3 class="callout-title">Action: Building a matrix across different versions</h3>
+<h3 class="callout-title">Action: Building a matrix across different
+versions</h3>
 <div class="callout-content">
 <p>We could do better using <code>matrix</code>. The latter allows us to
 test the code against a combination of versions in a single job. Let’s
@@ -667,8 +670,10 @@ members of the matrix (see below).</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="putting-it-together-for-python-experimental-job" class="callout-inner">
-<h3 class="callout-title">Putting it together for Python experimental job…</h3>
+<h3 class="callout-title">Putting it together for Python experimental
+job…</h3>
 <div class="callout-content">
 <p>So if we <strong>only</strong> want to allow the job with version set
 to <code>3.14.0-beta.4</code> to fail without failing the workflow run,
@@ -698,8 +703,10 @@ we need something like:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="action-add-experimental-job-that-is-allowed-to-fail-in-the-matrix" class="callout-inner">
-<h3 class="callout-title">Action: Add experimental job that is allowed to fail in the matrix</h3>
+<h3 class="callout-title">Action: Add experimental job that is allowed
+to fail in the matrix</h3>
 <div class="callout-content">
 <p>Add “3.14.0-beta.4” to our current Python package CI YAML via the
 matrix but allow it to fail.</p>
@@ -711,7 +718,7 @@ matrix but allow it to fail.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Below is a solution for <code>.github/workflow/main.yml</code>:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -770,6 +777,7 @@ solution are built around.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="experimental-ci-jobs" class="callout-inner">
 <h3 class="callout-title">Experimental CI jobs</h3>
 <div class="callout-content">
@@ -801,8 +809,10 @@ of labels for runner types</a></p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="action-find-out-the-labels-for-all-three-platforms" class="callout-inner">
-<h3 class="callout-title">Action: Find out the labels for all three platforms</h3>
+<h3 class="callout-title">Action: Find out the labels for all three
+platforms</h3>
 <div class="callout-content">
 <p>Using the documentation links above, get the three “latest” labels
 for Linux, Mac, and Windows.</p>
@@ -814,7 +824,7 @@ for Linux, Mac, and Windows.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ul><li>Linux: <code>ubuntu-latest</code>
 </li>
@@ -839,8 +849,10 @@ three platforms!</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="not-necessarily-the-best-practice-to-use-latest" class="callout-inner">
-<h3 class="callout-title">Not necessarily the best practice to use “latest”…</h3>
+<h3 class="callout-title">Not necessarily the best practice to use
+“latest”…</h3>
 <div class="callout-content">
 <p>It is arguable but… using “latest” versions for the platforms may not
 be the best practice. This practice is essentially testing versions of
@@ -859,8 +871,10 @@ longer available!</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="action-add-cross-platform-testing-to-ci-yaml" class="callout-inner">
-<h3 class="callout-title">Action: Add cross-platform testing to CI YAML</h3>
+<h3 class="callout-title">Action: Add cross-platform testing to CI
+YAML</h3>
 <div class="callout-content">
 <p>Using the “latest” labels, add Linux, Mac, and Windows testing to our
 current CI YAML.</p>
@@ -874,7 +888,7 @@ for <code>runs-on</code> and also for the <code>include</code></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -955,8 +969,8 @@ following:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Matrix can help DRY your CI for multi-version and cross-platform
 testing</li>
@@ -1010,7 +1024,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.12" class="external-link">sandpaper (0.16.12)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/406bb97bab56e8a0c29f2f362164c5d4a05b7ee1" class="external-link">varnish (1.0.7.9000)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/406bb97bab56e8a0c29f2f362164c5d4a05b7ee1" class="external-link">varnish (1.0.7.9000)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1033,7 +1047,7 @@ any links that you are not going to use.
   "identifier": "https://INTERSECT-training.github.io/CI-CD/instructor/ci-for-python-package-matrix.html",
   "dateCreated": "2025-07-18",
   "dateModified": "2025-07-18",
-  "datePublished": "2025-08-05"
+  "datePublished": "2025-08-12"
 }
 
   </script><script>
