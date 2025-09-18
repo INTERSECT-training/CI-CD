@@ -18,29 +18,29 @@ carpentry: 'intersect'
 carpentry_description: 'CI/CD'
 
 # Overall title for pages.
-title: 'CI/CD' # FIXME
+title: 'CI/CD' 
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: ~ 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'beta' # FIXME
+life_cycle: 'beta' 
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/INTERSECT-training/CI-CD' # FIXME
+source: 'https://github.com/INTERSECT-training/CI-CD' 
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'icosden@princeton.edu' # FIXME
+contact: 'icosden@princeton.edu' 
 
 # Navigation ------------------------------------------------
 #
@@ -94,3 +94,15 @@ profiles:
 # sandpaper and varnish versions) should live
 
 varnish: intersect-training/varnish
+
+analytics: |
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6XZ4T5T7H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-L6XZ4T5T7H');
+  </script>
+
