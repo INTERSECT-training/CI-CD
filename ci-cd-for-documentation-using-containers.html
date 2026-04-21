@@ -425,7 +425,7 @@ documentation.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">docker</span> build <span class="at">-t</span> my-docs .</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">docker</span> build <span class="at">-t</span> my-docs .</span></code></pre>
 </div>
 <p>So let us add this to our CI YAML. Luckily, Docker is already
 installed on the GitHub Actions runners!</p>
@@ -434,10 +434,10 @@ will make our feature branch:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">cd</span> intersect-training-cicd</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">git</span> pull</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> add-docs-cicd</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">cd</span> intersect-training-cicd</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> checkout main</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="fu">git</span> pull</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="fu">git</span> checkout <span class="at">-b</span> add-docs-cicd</span></code></pre>
 </div>
 <p>We will create a new <code>.github/workflows/docs-ci.yml</code> file
 in the project.</p>
@@ -446,16 +446,16 @@ editor and add the following</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Documentation CI</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> push</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="at">  </span><span class="fu">build-docs-using-docker</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build docs via Docker</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> docker build -t my-docs .</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Documentation CI</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> push</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a><span class="at">  </span><span class="fu">build-docs-using-docker</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build docs via Docker</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> docker build -t my-docs .</span></span></code></pre>
 </div>
 <p>NOTE: Don’t forget the <code>.</code> at the end of the
 <code>docker build -t my-docs .</code> command! That tells the build
@@ -464,9 +464,9 @@ command which directory to use.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/docs-ci.yml</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds job to build docs in CI via docker"</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="fu">git</span> add .github/workflows/docs-ci.yml</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds job to build docs in CI via docker"</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
 </div>
 <figure><img src="fig/docker-ci-docs.png" alt="Displays the output of a CI Github Action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CI</div>
 </figure><p>So we are successfully building our container image in CI!</p>
@@ -492,11 +492,11 @@ trigger:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="at">    </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="at">    </span><span class="fu">release</span><span class="kw">:</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="at">      </span><span class="fu">types</span><span class="kw">:</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> published</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="at">    </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="at">    </span><span class="fu">release</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="at">      </span><span class="fu">types</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a><span class="at">        </span><span class="kw">-</span><span class="at"> published</span></span></code></pre>
 </div>
 <p>For the jobs, we will do a build and push of the container image on
 Releases.</p>
@@ -519,43 +519,43 @@ editor and add the following:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Documentation CD</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="at">    </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="at">    </span><span class="fu">release</span><span class="kw">:</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="at">      </span><span class="fu">types</span><span class="kw">:</span></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> published</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="at">  </span><span class="fu">publish-docs-using-docker</span><span class="kw">:</span></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="at">      </span><span class="fu">packages</span><span class="kw">:</span><span class="at"> write</span></span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span></span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Checkout</span></span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
-<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span></span>
-<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Docker Buildx</span></span>
-<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/setup-buildx-action@v2</span></span>
-<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span></span>
-<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Login to GitHub Container Registry</span></span>
-<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/login-action@v2</span></span>
-<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="at">          </span><span class="fu">registry</span><span class="kw">:</span><span class="at"> ghcr.io</span></span>
-<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="at">          </span><span class="fu">username</span><span class="kw">:</span><span class="at"> ${{ github.actor }}</span></span>
-<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a><span class="at">          </span><span class="fu">password</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span>
-<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a></span>
-<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span></span>
-<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build and push catalog image</span></span>
-<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/build-push-action@v4</span></span>
-<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a><span class="at">          </span><span class="fu">context</span><span class="kw">:</span><span class="at"> .</span></span>
-<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a><span class="at">          </span><span class="fu">push</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="at"> </span></span>
-<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a><span class="at">          </span><span class="fu">platforms</span><span class="kw">:</span><span class="at"> linux/amd64,linux/arm64</span></span>
-<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ghcr.io/${{ github.repository }}:${{ github.ref_name }}</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Documentation CD</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="at">    </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="at">    </span><span class="fu">release</span><span class="kw">:</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a><span class="at">      </span><span class="fu">types</span><span class="kw">:</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a><span class="at">        </span><span class="kw">-</span><span class="at"> published</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1" aria-label="code-block-6-8"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1" aria-label="code-block-6-9"></a><span class="at">  </span><span class="fu">publish-docs-using-docker</span><span class="kw">:</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1" aria-label="code-block-6-10"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1" aria-label="code-block-6-11"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1" aria-label="code-block-6-12"></a><span class="at">      </span><span class="fu">packages</span><span class="kw">:</span><span class="at"> write</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1" aria-label="code-block-6-13"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1" aria-label="code-block-6-14"></a><span class="at">      </span><span class="kw">-</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1" aria-label="code-block-6-15"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Checkout</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1" aria-label="code-block-6-16"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1" aria-label="code-block-6-17"></a></span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1" aria-label="code-block-6-18"></a><span class="at">      </span><span class="kw">-</span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1" aria-label="code-block-6-19"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Docker Buildx</span></span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1" aria-label="code-block-6-20"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/setup-buildx-action@v2</span></span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1" aria-label="code-block-6-21"></a></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1" aria-label="code-block-6-22"></a><span class="at">      </span><span class="kw">-</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1" aria-label="code-block-6-23"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Login to GitHub Container Registry</span></span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1" aria-label="code-block-6-24"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/login-action@v2</span></span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1" aria-label="code-block-6-25"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1" aria-label="code-block-6-26"></a><span class="at">          </span><span class="fu">registry</span><span class="kw">:</span><span class="at"> ghcr.io</span></span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1" aria-label="code-block-6-27"></a><span class="at">          </span><span class="fu">username</span><span class="kw">:</span><span class="at"> ${{ github.actor }}</span></span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1" aria-label="code-block-6-28"></a><span class="at">          </span><span class="fu">password</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1" aria-label="code-block-6-29"></a></span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1" aria-label="code-block-6-30"></a><span class="at">      </span><span class="kw">-</span></span>
+<span id="cb6-31"><a href="#cb6-31" tabindex="-1" aria-label="code-block-6-31"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build and push catalog image</span></span>
+<span id="cb6-32"><a href="#cb6-32" tabindex="-1" aria-label="code-block-6-32"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/build-push-action@v4</span></span>
+<span id="cb6-33"><a href="#cb6-33" tabindex="-1" aria-label="code-block-6-33"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-34"><a href="#cb6-34" tabindex="-1" aria-label="code-block-6-34"></a><span class="at">          </span><span class="fu">context</span><span class="kw">:</span><span class="at"> .</span></span>
+<span id="cb6-35"><a href="#cb6-35" tabindex="-1" aria-label="code-block-6-35"></a><span class="at">          </span><span class="fu">push</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="at"> </span></span>
+<span id="cb6-36"><a href="#cb6-36" tabindex="-1" aria-label="code-block-6-36"></a><span class="at">          </span><span class="fu">platforms</span><span class="kw">:</span><span class="at"> linux/amd64,linux/arm64</span></span>
+<span id="cb6-37"><a href="#cb6-37" tabindex="-1" aria-label="code-block-6-37"></a><span class="at">          </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> ghcr.io/${{ github.repository }}:${{ github.ref_name }}</span></span></code></pre>
 </div>
 <p>A few things to note:</p>
 <ul><li>The <code>permissions:packages:write</code> is important to allow
@@ -590,9 +590,9 @@ as a sort of “version number” (i.e. <code>add-docs-cd</code> or
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">git</span> add .github/workflows/docs-cd.yml</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds CD for docs to container image registry"</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="fu">git</span> add .github/workflows/docs-cd.yml</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Adds CD for docs to container image registry"</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-docs-cicd</span></code></pre>
 </div>
 <figure><img src="fig/github-container-package-cd.png" alt="Displays the output of a Github Action" class="figure mx-auto d-block"><div class="figcaption">GitHub Actions docs CD</div>
 </figure><p>Looks like it passed!</p>
@@ -608,7 +608,7 @@ server!</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-p</span> 8080:80 <span class="op">&lt;</span>container image tag<span class="op">&gt;</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">docker</span> run <span class="at">-p</span> 8080:80 <span class="op">&lt;</span>container image tag<span class="op">&gt;</span></span></code></pre>
 </div>
 <p>Then, navigate to <code>http://localhost:8080</code>.</p>
 <p>Now we can allow operations or system administrators to serve our
@@ -717,7 +717,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.0" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/e710c947c6d59097e1568794dd0a0041e5db067d" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/e710c947c6d59097e1568794dd0a0041e5db067d" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -740,7 +740,7 @@ any links that you are not going to use.
   "identifier": "https://INTERSECT-training.github.io/CI-CD/ci-cd-for-documentation-using-containers.html",
   "dateCreated": "2025-09-18",
   "dateModified": "2025-07-18",
-  "datePublished": "2026-04-14"
+  "datePublished": "2026-04-21"
 }
 
   </script><script>
